@@ -8,16 +8,7 @@ $total = $wp_query->found_posts; ?>
 <section class="search__results"> 
     <div class="container">
         <div class="row">
-            <h2>
-                <?php 
-                if($total==1):
-                    echo $total .' Resultaat gevonden voor: '. $keyword;
-                elseif($total < 1):
-                    echo 'Geen resultaten gevonden voor: '. $keyword; 
-                else:
-                    echo $total .' Resultaten gevonden voor: '. $keyword; 
-                endif; ?>
-            </h2>
+
         </div>
             <div class="row-content">
             <?php
