@@ -20,23 +20,7 @@ $total = $wp_query->found_posts; ?>
             </h2>
         </div>
             <div class="row-content">
-            <?php
-                if ($wp_query->have_posts()) : ?>
 
-                <div class="products_grid">
-                    <?php 
-                    while ($wp_query->have_posts()) : $wp_query->the_post(); 
-                        get_template_part('template-parts/cards/product'); 
-                    endwhile; ?>
-                </div>
-            
-                <?php    
-                endif; 
-                                
-                // Pagination
-
-
-                wp_reset_postdata();?>
             </div>
         </div>
             
