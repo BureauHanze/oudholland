@@ -349,25 +349,24 @@ window.addEventListener("load", function () {
 
 
 
-// overlay active on mouse hover menu items
-const menuItems = document.querySelectorAll('.menu .menu-item');
-menuItems.forEach(f => f.addEventListener('mouseenter', function() {
-    menuItems.forEach(e => {
-        const overlayActive = document.getElementById('page-overlay')
-        overlayActive.classList.add('page-overlay--active');
-    // const bodyElement = document.body;
-    // bodyElement.classList.add("--menu-hover");
-  })
-}));
-menuItems.forEach(f => f.addEventListener('mouseout', function() {
-    menuItems.forEach(e => {
-    // const bodyElement = document.body;
-    // bodyElement.classList.remove("--menu-hover");
-    const overlayActive = document.getElementById('page-overlay')
-    overlayActive.classList.remove('page-overlay--active');
-  })
-}));
-
+// // overlay active on mouse hover menu items
+// const menuItems = document.querySelectorAll('.menu .menu-item');
+// menuItems.forEach(f => f.addEventListener('mouseenter', function() {
+//     menuItems.forEach(e => {
+//         const overlayActive = document.getElementById('page-overlay')
+//         overlayActive.classList.add('page-overlay--active');
+//     // const bodyElement = document.body;
+//     // bodyElement.classList.add("--menu-hover");
+//   })
+// }));
+// menuItems.forEach(f => f.addEventListener('mouseout', function() {
+//     menuItems.forEach(e => {
+//     // const bodyElement = document.body;
+//     // bodyElement.classList.remove("--menu-hover");
+//     const overlayActive = document.getElementById('page-overlay')
+//     overlayActive.classList.remove('page-overlay--active');
+//   })
+// }));
 
 
 
