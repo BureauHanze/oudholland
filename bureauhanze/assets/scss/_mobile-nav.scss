@@ -58,7 +58,7 @@
             .menu-item-has-children {
                 .sub-menu {
                     a {
-                        z-index: 99999 !important;
+                        // z-index: 99999 !important;
                         &::after {
                             background-image: none;
                         }

@@ -15,8 +15,8 @@
     opacity: 0.68;
     background: black;
     cursor: pointer;
-    transition: opacity 0.8s ease-in-out;
-    z-index: 97;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
     &::after {
         content: "";
         position: absolute;

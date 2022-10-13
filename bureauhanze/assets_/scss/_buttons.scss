@@ -1,0 +1,113 @@
+.btn,
+button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: $font-family !important;
+    font-size: $font-md;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    width: fit-content;
+    line-height: 1;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -webkit-border-radius: none;
+}
+
+.btn-primary,
+.btn-primary-icon {
+    background-color: $primary-color;
+    box-shadow: 3px 3px 0 0 rgba(0,0,0,0.12);
+    &:hover {
+        background-color: $secondary-color;
+    }
+}
+
+.btn-secondary,
+.btn-secondary-icon {
+    background-color: $secondary-color;
+    border: 2px solid $secondary-color;
+    box-shadow: 3px 3px 0 0 #D2DCE3;
+    &:hover {
+        background-color: $primary-color;
+        border: 2px solid $primary-color;
+    }
+}
+
+.btn-primary-icon,
+.btn-secondary-icon,
+.btn-primary-outline,
+.btn-primary-outline-icon,
+.btn-link,
+.btn-link-icon {
+    svg {
+        height: 16px;
+        width: 20px;
+        margin-right: 6px;
+        transform: translateX(-8px);
+        fill: white;
+    }
+}
+
+.btn-primary-outline,
+.btn-primary-outline-icon {
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    &:hover {
+        color: white;
+        background-color: $secondary-color;
+        border: 2px solid $secondary-color;
+        svg {
+            fill: white;
+        }
+    }
+    svg {
+        fill: $primary-color;
+    }
+}
+
+
+
+
+
+
+.btn-link {
+    padding: 0;
+    color: $primary-color;
+    &:hover {
+        color: $secondary-color;
+    }
+    svg {
+        fill: $primary-color;
+    }
+}
+.btn-link-icon {
+    color: $primary-color;
+    padding: 0;
+    &:hover {
+        color: $secondary-color;
+        svg {
+            fill: $secondary-color;
+        }
+    }
+    svg {
+        fill: $primary-color;
+        transform: rotate(90deg);
+        margin-right: 6px;
+        height: 6px;
+    }
+}
+
+
+// .btn-secondary {
+//     background-color: $secondary-color;
+//     &:hover {
+//         background-color: $primary-color;
+//     }
+// }
