@@ -1,0 +1,10 @@
+
+<svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Projectinrichting" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-655.000000, -629.000000)" fill="#E39A3F" fill-rule="nonzero" stroke="#1F3F58" stroke-width="2">
+            <g id="down-filled-triangular-arrow-(1)" transform="translate(656.000000, 630.000000)">
+                <path d="M13.3246675,0 L0.675297532,0 C0.0767112728,0 -0.228228897,0.722821143 0.200946157,1.1519962 L6.52563116,7.4766812 C6.78539501,7.73644505 7.21457006,7.73644505 7.47444685,7.4766812 L13.7991319,1.1519962 C14.228194,0.722821143 13.9232538,0 13.3246675,0 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,246 @@
+.footer {
+    background-color: #1A2C36;
+    overflow: hidden;
+    &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 420px;
+        width: 100%;
+        content: "";
+        background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/wave.svg');
+        background-size: cover;
+    }
+    p, a {
+        font-size: $font-md;
+    }
+    a {
+        text-decoration: none;
+        color: #B3B9BC;
+    }
+
+    .container {
+        position: relative;
+        padding-top: $padding-xl;
+        .footer__spinning-text {
+            position: absolute;
+            top: -122px;
+            right: 0;
+            height: 250px;
+            aspect-ratio: 1;
+            #de-specialist-in-kan {
+                animation: rotating 12s linear infinite;
+                transform-origin: center;
+            }
+        }
+        .row {
+            .footer__main-heading {
+                color: white;
+                font-weight: bold;
+                font-size: $font-xxl;
+                margin-bottom: $margin-lg;
+            }
+            .footer__steps {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 48px;
+                @media(max-width: $tablet){
+                    flex-direction: column;
+                    gap: $gap-md;
+                }
+                .steps__step {
+                    display: flex;
+                    gap: $gap-md;
+                    align-items: center;
+                    .step__image {
+                        background: #1F3F58;
+                        padding: $padding-md;
+                        border-radius: $border-radius-xxxs;
+                        svg {
+                            height: 32px;
+                            width: 32px;
+                            object-fit: contain;
+                        }
+                    }
+                    .step__text {
+                        p {
+                            font-size: $font-sm;
+                            color: #8E989D;
+                            margin: 0;
+                            line-height: 1.3;
+                            strong {
+                                color: white;
+                                font-size: $font-md;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .row-banner {
+            background: #E39A3F;
+            padding: 48px;
+            overflow: hidden;
+            border-radius: 4px;
+            margin-bottom: $margin-xl;
+            @media(max-width: $tablet){
+                padding: $padding-lg;
+            }
+            @media(max-width: $mobile){
+                padding: $padding-md;
+            }
+            &::before {
+                position: absolute;
+                top: -132px;
+                right: -132px;
+                content: "";
+                height: 300px;
+                width: 300px;
+                border-radius: 50%;
+                background: #CF8F3C;
+            }
+            h2 {
+                color: white;
+                font-weight: 900;
+                @media(max-width: $tablet){
+                    font-size: $font-xxl;
+                }
+            }
+            .btn {
+                display: block;
+                margin-left: auto;
+                padding: 14px 20px;
+                border: 1px solid #1F3F58;
+                border-radius: 4px;
+                background: white;
+                color: black;
+                box-shadow: 3px 3px 0 0 rgba(0,0,0,0.12);
+                &:hover {
+                    background: $primary-color;
+                    color: white;
+                }
+            }
+        }
+        .row-information {
+            display: grid;
+            grid-template-columns: 250px 2px 1fr;
+            gap: $gap-xl;
+            margin-bottom: $margin-lg;
+            @media(max-width: $desktop){
+                grid-template-columns: 1fr;
+            }
+            .footer__contact {
+                .footer__logo {
+                    margin-bottom: $margin-lg;
+                    max-width: 300px;
+                    .logo-text,
+                    .logo-right,
+                    .logo-left {
+                        color: white;
+                    }
+                    .logo-circle {
+                        fill: $red;
+                    }
+                }
+                .main__contact {
+                    &:nth-of-type(1) {
+                        margin-bottom: $margin-sm;
+                    }
+                }
+            }
+            .footer__divider {
+                background: #4F5D65;
+                @media(max-width: $desktop){
+                    display: none;
+                }
+            }
+            .footer__links {
+                display: flex;
+                justify-content: space-between;
+                gap: $gap-lg;
+                @media(max-width: $desktop){
+                    grid-row-start: 1;
+                    gap: $gap-lg;
+                }
+                @media(max-width: $tablet){
+                    flex-direction: column;
+                }
+                h3 {
+                    color: white;
+                    font-size: $font-md;
+                }
+                a {
+                    display: block;
+                    width: fit-content;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .footer__copyright {
+        background: #1A2C36;
+        position: relative;
+        z-index: 99;
+        p, a {
+            font-size: $font-md;
+            margin: 0;
+            color: #CED1D3;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: $padding-md;
+            padding-bottom: $padding-md;
+            @media(max-width: $tablet){
+                flex-direction: column-reverse;
+                gap: $gap-lg;
+            }
+            .bottom__links {
+                display: flex;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                    margin: 0;
+                    &:hover {
+                        text-decoration: underline;
+                        text-underline-position: under;
+                    }
+                }
+            }
+        }
+        .to-top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: $margin-lg;
+            transition: all $main-transition;
+            border: 1px solid white;
+            fill: white;
+            background: white;
+            height: 32px;
+            width: 32px;
+            padding: $padding-sm;
+            border-radius: 4px;
+            svg {
+                #Home {
+                    stroke: $primary-color;  
+                }
+            }
+            
+            &:hover {
+                background-color: black;
+                border: 1px solid $primary-color;
+                svg {
+                    #Home {
+                        stroke: white;  
+                    }
+                }
+            }
+        }
+    }
+}

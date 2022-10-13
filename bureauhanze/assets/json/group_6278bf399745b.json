@@ -1,0 +1,273 @@
+{
+    "key": "group_6278bf399745b",
+    "title": "Section - Flex content",
+    "fields": [
+        {
+            "key": "field_6278bf4b01e7c",
+            "label": "Flex content",
+            "name": "section_flex-content",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_6278bf50283b9": {
+                    "key": "layout_6278bf50283b9",
+                    "name": "section_flex-content_row",
+                    "label": "Afbeelding met tekst",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6278bff701e7f",
+                            "label": "Afbeelding positie",
+                            "name": "section_flex-content_order",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "row": "Afbeelding links",
+                                "row-reverse": "Afbeelding rechts"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_6278bf8701e7d",
+                            "label": "Afbeelding",
+                            "name": "section_flex-content_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_6278bfb001e7e",
+                            "label": "Tekst",
+                            "name": "section_flex-content_text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_627bc3cdab3e2": {
+                    "key": "layout_627bc3cdab3e2",
+                    "name": "section_flex-content-movie_row",
+                    "label": "Afbeelding met filmpje",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_627bc3cdab3e3",
+                            "label": "Filmpje positie",
+                            "name": "section_flex-content-movie_order",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "row": "Filmpje links",
+                                "row-reverse": "Filmpje rechts"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_627bc3cdab3e4",
+                            "label": "Filmje",
+                            "name": "section_flex-content_movie",
+                            "type": "oembed",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "width": "",
+                            "height": ""
+                        },
+                        {
+                            "key": "field_627bc3cdab3e5",
+                            "label": "Tekst",
+                            "name": "section_flex-content-movie_text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_627bbc2fdb3bc": {
+                    "key": "layout_627bbc2fdb3bc",
+                    "name": "section_flex-content-text_row",
+                    "label": "Tekst met kolommen",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_627bbb622fb9c",
+                            "label": "Tekstkolommen",
+                            "name": "section_flex-content_text-columns-amount",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "1": "1 kolom",
+                                "2": "2 kolommen",
+                                "3": "3 kolommen"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_627bc0c7e9ed9",
+                            "label": "Kop",
+                            "name": "section_flex-content_text-columns-heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_627bbb622fb9e",
+                            "label": "Tekst",
+                            "name": "section_flex-content_text-columns",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Nieuw flex content blok",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "72"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1654683744
+}

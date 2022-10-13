@@ -1,0 +1,46 @@
+
+
+// .swiper-button-next, 
+// .swiper-button-prev {
+//     &::after {
+//         content: "";
+//         background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/chevron-swiper.svg');
+//         background-size: contain;
+//         height: 12px;
+//         width: 8px;
+//         background-repeat: no-repeat;
+//     }
+// }
+.swiper-button-prev {
+    left: 0;
+    &::after {
+        transform: rotate(180deg);
+    }
+}
+.swiper-button-next {
+    right: -14px;
+}
+.swiper-button-prev {
+    left: -14px;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+    &::after {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: "";
+        background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/chevron-swiper.svg');
+        background-size: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 5px;
+        aspect-ratio: 1;
+        background-color: white;
+        padding: 12px;
+        height: 12px;
+        width: 8px;
+        box-shadow: 2px 2px 0 0 rgba(0,0,0,0.17);
+    }
+}

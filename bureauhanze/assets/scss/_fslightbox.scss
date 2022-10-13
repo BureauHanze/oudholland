@@ -1,0 +1,63 @@
+.fslightbox-container {
+    font-family: $font-family !important;
+    .fslightbox-slide-btn-container-previous,
+    .fslightbox-slide-btn-container-next {
+        .fslightbox-slide-btn {
+            background: none;
+            svg {
+                display: none;
+            }
+            // &::before {
+            //     content: "";
+            //     background-image: url('/wp-content/themes/bureauhanze/assets/svg/arrow-slider.svg');
+            //     background-repeat: no-repeat;
+            //     height: 44px;
+            //     width: 44px;
+            // }
+            &::before {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                content: "";
+                background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/chevron-swiper.svg');
+                background-size: 10px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                border-radius: 5px;
+                aspect-ratio: 1;
+                background-color: white;
+                padding: 12px;
+                height: 12px;
+                width: 8px;
+                box-shadow: 2px 2px 0 0 rgba(0,0,0,0.17);
+                transform: rotate(180deg);
+            }
+        }
+        .fslightbox-full-dimension {
+            img {
+                border-radius: 5px;
+                overflow: hidden;
+            }
+        }
+    }
+    .fslightbox-slide-btn-container-next {
+        .fslightbox-slide-btn {
+            &::before {
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
+.fslightbox-nav {
+    height: 45px;
+    top: 1% !important;
+    width: 99% !important;
+    position: absolute;
+    .fslightbox-toolbar {
+        .fslightbox-toolbar-button {
+            &:nth-child(1) {
+                display: none;
+            }
+        }
+    }
+}

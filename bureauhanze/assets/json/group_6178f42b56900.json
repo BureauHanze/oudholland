@@ -1,0 +1,507 @@
+{
+    "key": "group_6178f42b56900",
+    "title": "Thema opties",
+    "fields": [
+        {
+            "key": "field_620a6d24f233a",
+            "label": "Algemene website info",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 1
+        },
+        {
+            "key": "field_6179a0f70f954",
+            "label": "Bedrijfslogo",
+            "name": "contactLogo",
+            "type": "textarea",
+            "instructions": "SVG afbeelding",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-second",
+                "id": ""
+            },
+            "default_value": "<svg width=\"512px\" height=\"512px\" viewBox=\"0 0 512 512\" version=\"1.1\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\">\r\n    <title>Group<\/title>\r\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\r\n        <g id=\"Group\">\r\n            <circle id=\"Oval\" stroke=\"#979797\" fill=\"#D8D8D8\" cx=\"256\" cy=\"256\" r=\"255.5\"><\/circle>\r\n            <text id=\"LOGO\" font-family=\"Helvetica-Bold, Helvetica\" font-size=\"100\" font-weight=\"bold\" fill=\"#000000\">\r\n                <tspan x=\"109.283203\" y=\"293\">LOGO<\/tspan>\r\n            <\/text>\r\n        <\/g>\r\n    <\/g>\r\n<\/svg>",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_61839829b75c6",
+            "label": "Favicon",
+            "name": "contactFavicon",
+            "type": "image",
+            "instructions": "Afmeting 512px 512px",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-second",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": 512,
+            "min_height": 512,
+            "min_size": "",
+            "max_width": 512,
+            "max_height": 512,
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6179044e6bd42",
+            "label": "Bedrijfsnaam",
+            "name": "contactCompany",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-fourth",
+                "id": ""
+            },
+            "default_value": "Bedrijfsnaam",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62a1b00ea227a",
+            "label": "Bedrijfsnaam volledig",
+            "name": "contactCompanyFull",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-fourth",
+                "id": ""
+            },
+            "default_value": "Bedrijfsnaam",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6183993918c48",
+            "label": "Bedrijfsslogan",
+            "name": "contactSlogan",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-fourth",
+                "id": ""
+            },
+            "default_value": "WordPress webdevelopment",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_618396f0c65bc",
+            "label": "Bedrijfswebsite URL",
+            "name": "contactURL",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-fourth",
+                "id": ""
+            },
+            "default_value": "https:\/\/bureauhanze.nl\/",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_620a6cfaf2338",
+            "label": "Adresgegevens",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 1
+        },
+        {
+            "key": "field_6178ff949ba6f",
+            "label": "Adres",
+            "name": "contactAddress",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-fourth",
+                "id": ""
+            },
+            "default_value": "Straatnaam 11",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_617901e57dcd0",
+            "label": "Postcode",
+            "name": "contactPostal",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "one-fourth",
+                "id": ""
+            },
+            "default_value": "1234 AB",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_617901fe7dcd1",
+            "label": "Plaats",
+            "name": "contactPlace",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "75",
+                "class": "one-fourth",
+                "id": ""
+            },
+            "default_value": "Plaats",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6179022a7dcd3",
+            "label": "Land",
+            "name": "contactCountry",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-fourth",
+                "id": ""
+            },
+            "default_value": "Nederland",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_620a6d14f2339",
+            "label": "Contact details",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 1
+        },
+        {
+            "key": "field_6178f45566dc9",
+            "label": "Telefoonnummer",
+            "name": "contactPhone",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-fourth",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_6178fde2cb3d0",
+            "label": "E-mail adres",
+            "name": "contactMail",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-fourth",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_61d5577a78ad9",
+            "label": "KvK",
+            "name": "contactKvK",
+            "type": "text",
+            "instructions": "Kamer van Koophandel nummer",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-fourth",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61d557a978ada",
+            "label": "BTW",
+            "name": "contactBTW",
+            "type": "text",
+            "instructions": "BTW nummer",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-fourth",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_620a6cd3f2337",
+            "label": "Social Media",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 1
+        },
+        {
+            "key": "field_61ae1855e55de",
+            "label": "Facebook",
+            "name": "contactFacebook",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-eight",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_61ae19337923c",
+            "label": "LinkedIn",
+            "name": "contactLinkedIn",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-eight",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_61ae19147923b",
+            "label": "YouTube",
+            "name": "contactYouTube",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-eight",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_61ae1dd1cdbe4",
+            "label": "Instagram",
+            "name": "contactInstagram",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-eight",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_61af80d7ba22f",
+            "label": "Whatsapp",
+            "name": "contactWhatsApp",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-eight",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_62a1a703a0c54",
+            "label": "Aan \/ uitzetten custom functionaliteiten",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 1
+        },
+        {
+            "key": "field_62a1a68da0c53",
+            "label": "SEO (titel & meta)",
+            "name": "optionDisableSeo",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6179a0f70f954",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "one-third",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_62a1a73aa0c55",
+            "label": "Sitemap",
+            "name": "optionDisableSitemap",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-third",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_62a1ae622ff52",
+            "label": "Schema.org",
+            "name": "optionDisableSchemaOrg",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "one-third",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1654763581
+}

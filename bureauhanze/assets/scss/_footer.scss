@@ -1,0 +1,99 @@
+.footer {
+    background-color: $primary-color;
+    p, a {
+        color: white;
+    }
+    .container {
+        padding-top: $padding-xl;
+        .footer__top {
+            display: flex;
+            align-items: center;
+            align-items: baseline;
+            gap: $gap-xl;
+            @media(max-width: $tablet) {
+                flex-direction: column;
+                gap: $gap-md;
+                margin-top: $margin-lg;
+                margin-bottom: $margin-lg;
+            }
+            .footer__heading {
+                color: white;
+                font-size: $font-lg;
+                margin-bottom: $margin-md;
+            }
+            .footer__logo {
+                position: relative;
+                flex: 1 1 auto;
+                // padding: $padding-md $padding-md $padding-md 0;
+                margin-bottom: auto;
+                z-index: 1;
+                svg {
+                    max-width: 128px;
+                    .logo{
+                        fill: white;
+                    }
+                }
+            }
+            .footer__address {
+                flex: 0 1 auto;
+            }
+            .footer__contact {
+                flex: 0 1 auto;
+            }
+            // .footer__contact-links {
+            //     a {
+            //         justify-content: end;
+            //     }
+            // }
+        }
+    }
+    .footer__copyright {
+        background: $primary-color-d-4;
+        p, a {
+            font-size: $font-md;
+            margin: 0;
+            color: white;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: $padding-md;
+            padding-bottom: $padding-md;
+            .bottom__links {
+                display: flex;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                    margin: 0;
+                    &:hover {
+                        text-decoration: underline;
+                        text-underline-position: under;
+                    }
+                }
+            }
+        }
+        .to-top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: $margin-lg;
+            transition: all $main-transition;
+            border: 1px solid white;
+            fill: white;
+            height: 32px;
+            width: 32px;
+            padding: $padding-sm;
+            &:hover {
+                background-color: black;
+                border: 1px solid $primary-color;
+                svg {
+                    fill: $primary-color;
+                }
+            }
+            svg {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}

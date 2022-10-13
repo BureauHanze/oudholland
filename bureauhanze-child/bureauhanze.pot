@@ -1,0 +1,33 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: BureauHanze with WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-12 12:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.2; wp-6.0.2\n"
+"X-Domain: bureauhanze"
+
+#. Author of the theme
+msgid "Anoniem"
+msgstr ""
+
+#. Name of the theme
+msgid "BureauHanze with WooCommerce"
+msgstr ""
+
+#. URI of the theme
+msgid "https://bureauhanze.nl"
+msgstr ""
+
+#. Description of the theme
+msgid "WordPress, SEO, Webdevelopment, WooCommerce"
+msgstr ""
