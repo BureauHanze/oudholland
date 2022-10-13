@@ -49,7 +49,6 @@ endif; ?>">
 	</div>
 
 	<?php
-	// get_template_part( 'template-parts/navigation/mobile-navigation' ); 
 	get_template_part( 'template-parts/sections/can-i-help' ); ?>
 
 	<header class="header header-webshop" id="main__header">
@@ -60,7 +59,7 @@ endif; ?>">
 		<div class="header__top">
 			<div class="container">
 				<div class="logo-search">
-					<a class="header__logo" href="/" title="Home">
+					<a class="header__logo" href="/webshop/" title="Home">
 						<?php
 						$contactlogo = get_field('contactLogo', 'option');
 						if ($contactlogo) : ?>
@@ -85,8 +84,6 @@ endif; ?>">
 				<div class="header__contact">
 					<?php
 					if(is_user_logged_in()) : ?>
-		
-
 					<a href="/mijn-account/" title="Mijn account" class="btn btn-account">
 						<?php
 						get_template_part( '/assets/svg/icon-account' ); ?>
@@ -108,18 +105,11 @@ endif; ?>">
 						<span class="shopping-bag__text">Winkelwagen</span>
 					</div>
 				</div>
-
 				<a class="btn btn-projectinrichting" href="/" title="Hulp bij projectinrichting">
 					<?php
 					get_template_part( '/assets/svg/icon-projectinrichting' ); ?>
 					<span class="projectinrichting__text">Hulp bij<br/><strong>projectinrichting</strong></span>
 				</a>
-
-				<!-- <div id="nav--open">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div> -->
 			</div>
 		</div>
 
@@ -135,8 +125,7 @@ endif; ?>">
 				array( 
 					'menu' => 'webshop'
 				) 
-			);
-			?>
+			); ?>
 				<div id="nav--open">
 					<span></span>
 					<span></span>
@@ -157,14 +146,13 @@ endif; ?>">
 						$thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($shop_page_id), 'large');
 						list($url, $width, $height, $is_intermediate) = $thumbnail;
 						?>
-						<a href="#" class="leader__content" style="height:<?php echo $height; ?>px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;">
+						<a href="/webshop/bureau/vergadertafels/" title="Vergadertafels inrichten" class="leader__content" style="height:<?php echo $height; ?>px;background-image:url(<?php echo $url; ?>);background-repeat:no-repeat;">
 							<h2>Vergaderruimte inrichten?</h2>
 							<div class="btn btn-primary"><?php get_template_part( 'assets/svg/chevron' ); ?></div>
 						</a>
 					</div>
 				</div>
 				<div class="leader__offer">
-
 				<?php
 				$shop_page_id = wc_get_page_id('shop');
 				$featured_posts = get_field('webshop_main-offer', $shop_page_id);
@@ -205,11 +193,7 @@ endif; ?>">
 								</p>
 							<?php
 							endif ;?>
-							<!-- <p class="sale-amount__regular-price"><span><?php 
-							echo wc_get_price_including_tax( $product, array( 'price' => $product->get_regular_price() ) );
-							?></span>incl. btw</p> -->
 						</div>
-
 						<a class="btn btn-primary btn-yellow" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php get_template_part( 'assets/svg/arrow' ); ?>Samenstellen</a>
 					</div>
 					<div class="offer__image">
