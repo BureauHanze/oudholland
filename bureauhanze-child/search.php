@@ -34,33 +34,7 @@ $total = $wp_query->found_posts; ?>
                 endif; 
                                 
                 // Pagination
-                the_posts_pagination( array(
-                    'mid_size' => 2,
-                    'prev_text' => __( '
-                    <svg fill="currentcolor" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g fill-rule="evenodd">
-                            <g transform="translate(-803.000000, -981.000000)" fill-rule="nonzero">
-                                <g transform="translate(776.000000, 961.000000)">
-                                    <g transform="translate(27.000000, 20.000000)">
-                                        <polygon points="1.886625 0 0 1.8866875 6.1133125 8 0 14.1133125 1.886625 16 9.886625 8"></polygon>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>' ),
-                    'next_text' => __( '
-                    <svg fill="currentcolor" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g fill-rule="evenodd">
-                            <g transform="translate(-803.000000, -981.000000)" fill-rule="nonzero">
-                                <g transform="translate(776.000000, 961.000000)">
-                                    <g transform="translate(27.000000, 20.000000)">
-                                        <polygon points="1.886625 0 0 1.8866875 6.1133125 8 0 14.1133125 1.886625 16 9.886625 8"></polygon>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>' ),
-                ) );
+
 
                 wp_reset_postdata();?>
             </div>
