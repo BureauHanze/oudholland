@@ -8,7 +8,7 @@ $total = $wp_query->found_posts; ?>
 <section class="search__results"> 
     <div class="container">
         <div class="row">
-
+            Losers
         </div>
             <div class="row-content">
             <?php
