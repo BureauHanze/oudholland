@@ -112,8 +112,7 @@ endif; ?>">
 				array( 
 					'menu' => 'projectinrichting'
 				) 
-			);
-			?>
+			); ?>
 				<div id="nav--open">
 					<span></span>
 					<span></span>
