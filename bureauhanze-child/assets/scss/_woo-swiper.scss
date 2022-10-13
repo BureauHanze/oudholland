@@ -30,7 +30,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        content: "";
+        content: "" !important;
         background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/chevron-swiper.svg');
         background-size: 10px;
         background-repeat: no-repeat;

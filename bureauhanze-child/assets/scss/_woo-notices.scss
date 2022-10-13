@@ -1,14 +1,21 @@
 //WooCommerce notices
-
+.woo_notices {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .woocommerce-notices-wrapper, .woocommerce-NoticeGroup {
     .woocommerce-message, .woocommerce-error {
         display: flex;
         justify-content: flex-start;
         padding: $padding-md;
         align-items: center;
-        border: none;
-        color: #fff;
-        box-shadow: 0 7px 28px rgba(0, 0, 0, 0.2);
+        border: 1px solid $green;
+        border-radius: $border-radius-xxs;
+        box-shadow: 3px 3px 0 0 $green;
+        color: $text-color;
+        @media(max-with: $desktop){
+            flex-direction: column;
+        }
         a {
             margin-right: $margin-sm;
         }
@@ -30,7 +37,7 @@
             }
         }
         &::before {
-            color: #fff;
+            color: $green;
             position: relative;
             top: 0;
             left: 0;
@@ -38,19 +45,30 @@
         }
     }
     .woocommerce-message {
-        background-color: $green; 
+        background-color: white;
+        a {
+            text-decoration: underline;
+            &:hover {
+                color: $primary-color;
+            }
+        }
     }
     .woocommerce-error {
-        background-color: $red;;
+        box-shadow: 3px 3px 0 0 $red;
+        border: 1px solid $red;
+        background: white;
         ul {
             padding: 0px;
             margin: 0px;
-            li {
-                color: white;
-            }
+            // li {
+            //     color: white;
+            // }
         }
         a {
             margin-left: auto;
+        }
+        &::before {
+            color: $red;
         }
     }
     a {

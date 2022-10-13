@@ -1327,6 +1327,12 @@
 }
 
 .search {
+    .search__results {
+        h2 {
+            font-size: $font-xxl;
+            margin-bottom: $margin-lg;
+        }
+    }
     .header__breadcrumbs {
         display: none;
     }
@@ -1350,6 +1356,26 @@
     }
 }
 
+.page-webshop__winkelwagen {
+    .header {
+        .header__top {
+            height: 100px;
+            .container {
+                #nav--open {
+                    display: none !important;
+                }
+            }
+        }
+    }
+    .woocommerce {
+        .product_info {
+            .edit_in_cart_text {
+                display: none;
+            }
+        }
+    }
+}
+
 .page-webshop__afrekenen {
     .header {
         .header__top {
@@ -1360,6 +1386,9 @@
                 }
                 .header__logo-mobile {
                     display: none !important;
+                }
+                #nav--open {
+                    visibility: hidden;
                 }
             }
         }

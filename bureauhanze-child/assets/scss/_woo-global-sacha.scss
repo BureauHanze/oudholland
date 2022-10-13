@@ -164,12 +164,6 @@ ol {
     .onsale {
         visibility: hidden;
     }
-    .card__image {
-        img {
-            object-fit: contain;
-            max-height: 200px;
-        }
-    }
     .card__info {
         min-height: 141px;
         padding: 24px;
@@ -257,7 +251,7 @@ ol {
         display: none;
     }
     del {
-       opacity: 0.5; 
+       opacity: 0.5;
     }
     ins {
         font-size: $font-xxxl;
@@ -369,14 +363,17 @@ ol {
         width: 100%;
     }
     .orderby {
-       color: #000; 
+       color: #000;
        padding: $padding-sm;
        border-radius: 0px;
     //    font-size: $font-root;
     }
 }
 
-
+.woo_notices {
+    // margin-top: $margin-lg;
+    padding: 0px;
+}
 
 .products {
     .container {
@@ -392,23 +389,3 @@ sup {
     transform: translateX(-4px);
 }
 
-.single_add_to_cart_button {
-    position: relative;
-    width: 100%;
-    box-shadow: 3px 3px 0 0 #D2DCE3;
-    font-weight: bold !important;
-    &::before {
-        position: absolute;
-        top: 50%;
-        bottom: 0;
-        transform: translateY(-50%);
-        left: 32px;
-        content: "";
-        height: 24px;
-        width: 24px;
-        background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/cart.svg');
-        background-repeat: no-repeat;
-        z-index: 99;
-        background-size: contain;
-    }
-}

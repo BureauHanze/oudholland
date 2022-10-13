@@ -563,13 +563,16 @@ div.woocommerce_cart_outer > form {
 }
 
 .quantity input.qty, .woocommerce .quantity input.qty {
-    border-radius: 6px;
-    border: #CBCBCB 1px solid;
+    border-radius: 4px;
+    border: 1px solid #979797;
     text-align: right;
     min-width: 47px;
-    width: 57px;
-    height: 35px;
-    color: #1C5072;
+    width: 68px;
+    height: 50px;
+    padding: $padding-md;
+    color: $text-color;
+    background: #E8EDF0;
+    border-right: 1px solid #979797 !important;
 }
 
 .afmeting {

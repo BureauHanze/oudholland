@@ -30,6 +30,7 @@
               margin-bottom: $margin-lg;
               border-radius: $border-radius-xl;
               overflow: hidden;
+
   
               .swiper-slide {
                 img {
@@ -532,6 +533,7 @@
     }
   
     .form-row {
+      width: 100%;
       flex: 100%;
     }
   }
@@ -600,10 +602,14 @@
   
         #billing_first_name_field, #billing_company_field, #billing_phone_field, #shipping_first_name_field, #shipping_company_field {
           grid-column: 1 / span 3;
+
         }
   
         #billing_last_name_field, #billing_country_field, #billing_email_field, #shipping_last_name_field, #shipping_country_field {
           grid-column: 4 / span 3;
+          // @media(max-width: $tablet){
+          //   grid-column: 1;
+          // }
         }
   
         #billing_address_1_field, #shipping_address_1_field {
@@ -617,6 +623,13 @@
         #billing_city_field, #shipping_city_field {
           grid-column: 5 / span 2;
         }
+        @media(max-width: $tablet){
+          display: flex;
+          flex-direction: column;
+        }
+        // @media(max-width: $tablet){
+        //   grid-template-columns: 1fr;
+        // }
       }
     }
   }
@@ -630,11 +643,12 @@
     opacity: 0;
     position: relative;
     background-color: $red;
-    width: fit-content;
+    width: 100%;
     margin: 0;
-    transition: .3s;
+    transition: all $main-transition;
     padding: 0;
     color: white;
+    border-radius: $border-radius-xxs;
   }
   
   
