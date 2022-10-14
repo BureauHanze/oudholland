@@ -1035,18 +1035,23 @@
                         color: white !important;
                         width: 100%;
                         padding: 16px 0px;
+                        display: flex;
+                        justify-content: center;
                     }
                     .--active {
-                        color: $yellow;
+                        color: $yellow !important;
                         &::after {
+                            background-color: transparent;
+                            z-index: 10;
+                        }
+                        &::before {
                             content: "";
                             position: absolute;
                             height: 3px;
-                            width: 100%;
-                            background-color: $yellow !important;
-                            bottom: 2px;
-                            left: 0;
-                            right: 0;
+                            width: 50%;
+                            background-color: $yellow;
+                            bottom: 0px;
+                            margin: auto;                        
                             z-index: -1;
                         }
                     }
