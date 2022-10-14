@@ -5,18 +5,8 @@ get_header('shop'); ?>
 
     <?php
     get_template_part( 'template-parts/sections/flex-content' ); 
-    // get_template_part( 'template-parts/sections/content' ); 
-
-    if(is_page('contact')) :
-        get_template_part( 'template-parts/sections/contact' ); 
-    endif;
-
-    if(is_page('privacy-statement')) :
-        get_template_part( 'template-parts/sections/privacy-statement' ); 
-    endif;
 
     get_template_part( 'template-parts/socials/whatsapp-icon' ); 
-
 
     
     if(is_product_category()) :
@@ -25,7 +15,6 @@ get_header('shop'); ?>
         $args = array(
             'post_type'      => 'product',
             'posts_per_page' => 999,
-            // 'product_cat'    => 'bureau',
             'facetwp' => true,
             'tax_query'   => array( 
                 'relation' => 'AND',
@@ -37,7 +26,6 @@ get_header('shop'); ?>
                 ),
                 array(
                     'taxonomy'  => 'product_cat',
-                    // 'terms'     => array( 'bureau' ),
                     'terms'     => $queried_object->slug,
                         'field'     => 'slug',
                         'operator'  => 'IN',
@@ -52,52 +40,31 @@ get_header('shop'); ?>
         <div class="product-category">
             <div class="container">
                 <div class="product-category_categories">
-                    <?php
-                    $terms = get_the_terms( $post->ID, 'product_cat' );
-                    $term_id  = get_queried_object_id();
 
-                    $taxonomy = 'product_cat';
-                    $terms    = get_terms([
-                        'taxonomy'    => $taxonomy,
-                        'hide_empty'  => true,
-                        'parent'      => get_queried_object_id()
-                    ]);
-                    if ( !empty( $terms ) && !is_wp_error( $terms ) ): ?>
-                    <h3>Categorieën</h3>
-                    <?php
-                    endif; ?>
-                    <div class="categories">
-                    <?php
-                    foreach ( $terms as $term ) {
-                        $term_link = get_term_link( $term, $taxonomy ); ?>
-                        <a href="<?php echo $term_link; ?>"><?php echo $term->name . ' ' . "<span>" .'('. $term->count .')' . "</span>"; ?></a>
-                    <?php
-                    } ?>
-                    </div>
-                    
                     <div id="product-category__filter-container">
-                        <div class="more-btn">
-                            <?php 
-                            get_template_part('assets/svg/arrow'); ?>
-                            <div id="more__specs" class="more__specs" onclick="openFilters('more__specs')">Filters weergeven</div>
-                        </div>
-                        <div class="product-category__filters">
 
-                            <h3 class="filters__options">Opties</h3>
-                            <?php
-                            // echo do_shortcode('[facetwp facet="categories"]'); 
-                            ?>
-                            <h3 class="filters__options">Prijs</h3>
+                        <div class="product__filters">
+
+
+                            <?php if($queried_object = 'bureau'): ?>
+                                <div class="filters__checkboxes">
+                                    <h3 class="filters__options">Bladkleur</h3>
+                                    <?php
+                                    echo do_shortcode('[facetwp facet="opties"]'); ?>
+                                </div>
+                            <?php endif; ?>
+                            
                             <div class="filters__price">
+                                <h3 class="filters__options">Prijs</h3>
                                 <?php
                                 echo do_shortcode('[facetwp facet="prijs"]'); ?>
                             </div>
+
                         </div>
+
                     </div>
-                </div>
-                
-                
-                
+                </div>               
+
 
                 <div class="product-category__content">
                     <div class="row">
@@ -111,11 +78,11 @@ get_header('shop'); ?>
                                 $term_object = get_queried_object();
                                 echo $term_object->description; ?></p>
                             <?php
-                            else : ?>
-                                <p>Hier is nog geen tekst ingevuld</p>
-                            <?php
-                            endif; ?>
+                            endif; 
+                            $term = get_queried_object();
+                            if(get_field('product-category_full-description', $term)) : ?>
                             <a href="#read-more" title="Lees meer">Verder lezen</a>
+                            <?php endif; ?>
                         </div>
                     </div>
 
@@ -138,6 +105,7 @@ get_header('shop'); ?>
                         get_template_part('template-parts/cards/product'); 
                     endwhile; ?>
                     </div>
+                    
                     <div id="read-more" class="product-category__description">
                         <p><?php
                         $term = get_queried_object();

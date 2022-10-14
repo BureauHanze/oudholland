@@ -43,31 +43,23 @@ function openSpecs(id) {
         btntext.innerHTML = 'Minder specificaties';
     }
 }
-function openFilters(id) {
-    var e = document.getElementById(id);
-    e.classList.toggle("active");
 
-    var filterDiv = document.querySelector(".product-category__filters");
-    var filterSVG = document.querySelector(".more-btn svg");
-    filterDiv.classList.toggle("--active");
-    filterSVG.classList.toggle("svg--active");
-    var btntext = document.querySelector(".more__specs");
-    if (btntext.innerHTML === "Filters verbergen") {
-        btntext.innerHTML = 'Filters weergeven';
+// function openFilters(id) {
+//     var e = document.getElementById(id);
+//     e.classList.toggle("active");
 
-    } else {
-        btntext.innerHTML = 'Filters verbergen';
-    }
-}
+//     var filterDiv = document.querySelector(".product-category__filters");
+//     var filterSVG = document.querySelector(".more-btn svg");
+//     filterDiv.classList.toggle("--active");
+//     filterSVG.classList.toggle("svg--active");
+//     var btntext = document.querySelector(".more__specs");
+//     if (btntext.innerHTML === "Filters verbergen") {
+//         btntext.innerHTML = 'Filters weergeven';
 
-
-
-// function openFilters() {
-//     var e = document.getElementById('product-category__filter-container');
-//     e.classList.toggle("--hide");
+//     } else {
+//         btntext.innerHTML = 'Filters verbergen';
+//     }
 // }
-
-
 
 // Set Cookie for popup
 function setCookie(name,value,days) {

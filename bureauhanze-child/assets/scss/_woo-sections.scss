@@ -794,6 +794,7 @@
             }
         }
         .product-category__content {
+            min-width: 70%;
             .product-category__short-description {
                 display: flex;
                 gap: $gap-md;

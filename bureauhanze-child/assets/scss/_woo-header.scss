@@ -114,9 +114,11 @@
                 form {
                     display: flex;
                     flex: 1 1 100%;
+                    border-bottom: 2px solid $primary-color;
                 }
                 input[type="search"] {
-                    border-bottom: 2px solid $primary-color;
+                    padding-left: 0;
+                    border-radius: 0;
                 }
                 .search__icon {
                     position: relative;
@@ -489,10 +491,6 @@
                                 transition: all $main-transition;
                                 opacity: 0.5;
                             }
-                        }
-                        .--active {
-                            text-decoration: underline;
-                            padding-bottom: $padding-xs;
                         }
                         &:nth-child(1) {
                             &:hover {
