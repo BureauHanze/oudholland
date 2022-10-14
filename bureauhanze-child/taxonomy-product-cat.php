@@ -18,12 +18,6 @@ get_header('shop'); ?>
     get_template_part( 'template-parts/socials/whatsapp-icon' ); 
 
 
-
-
-
-
-
-
     
     if(is_product_category()) :
         $queried_object = get_queried_object();
