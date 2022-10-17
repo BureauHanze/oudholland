@@ -36,29 +36,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 			<div class="component__thumbnail">
 
-			<?php 
-
-
-
-
-
-				// var_dump($component);
-// if($component->get_option( $product_id )) {
-// 	$component_option = $component->get_option( $product_id );
-
-		
-// 	wc_get_template( 'composited-product/image.php', array(
-// 		'product_id'      => $product_id,
-// 		'image_size'      => $component_option->get_selection_thumbnail_size(),
-// 		'image_rel'       => current_theme_supports( 'wc-product-gallery-lightbox' ) ? 'photoSwipe' : 'prettyPhoto',
-// 		'component'       => $component
-// 	), '', WC_CP()->plugin_path() . '/templates/' );
-// }
-
-
-				// $product = wc_get_product();
-				// echo $product->get_image('full'); 
-				?>
 				<?php
 				$imageID = $component['thumbnail_id'];
 				if($imageID) :
@@ -69,21 +46,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?>
 				<div class="component__thumbnail__image" style="background-image: url('<?php echo $image[0]; ?>'); "> </div>
 
-
-
-
-
-
-
-
-
-
-
-
 			</div>	
 			
 			<?php
-
 			if ( $component->get_description() !== '' ) {
 				wc_get_template( 'single-product/component-description.php', array(
 					'description' => $component->get_description( true )

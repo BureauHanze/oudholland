@@ -45,14 +45,35 @@ get_header('shop'); ?>
 
                         <div class="product__filters">
 
+                            <?php
+                            $terms = get_the_terms( $post->ID, 'product_cat' );
+                            $term_id  = get_queried_object_id();
 
-                            <?php if($queried_object = 'bureau'): ?>
-                                <div class="filters__checkboxes">
-                                    <h3 class="filters__options">Bladkleur</h3>
-                                    <?php
-                                    echo do_shortcode('[facetwp facet="opties"]'); ?>
-                                </div>
-                            <?php endif; ?>
+                            $taxonomy = 'product_cat';
+                            $terms    = get_terms([
+                                'taxonomy'    => $taxonomy,
+                                'hide_empty'  => true,
+                                'parent'      => get_queried_object_id()
+                            ]);
+                            if ( !empty( $terms ) && !is_wp_error( $terms ) ): ?>
+                            <h3>Categorieën</h3>
+                            <?php
+                            endif; ?>
+                            <div class="categories">
+                                <?php
+                                foreach ( $terms as $term ) {
+                                    $term_link = get_term_link( $term, $taxonomy ); ?>
+                                    <a href="<?php echo $term_link; ?>"><?php echo $term->name . ' ' . "<span>" .'('. $term->count .')' . "</span>"; ?></a>
+                                <?php
+                                } ?>
+                            </div>
+
+                            <div class="filters__checkboxes">
+                                <h3 class="filters__options">Bladkleur</h3>
+                                <?php
+                                echo do_shortcode('[facetwp facet="opties"]'); ?>
+                            </div>
+                            
                             
                             <div class="filters__price">
                                 <h3 class="filters__options">Prijs</h3>

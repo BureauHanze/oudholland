@@ -7,9 +7,16 @@
       grid-column: span 2;
     }
     .multistep {
-      width: 73%;
+      width: auto;
+      flex: 1;
       @media (max-width: 1125px) {
         width: 62%;
+      }
+      &.last {
+        background-color: white;
+        z-index: 20;
+        padding-bottom: 100px;
+        margin-bottom: -100px !important;
       }
     }
     .component_summary {
@@ -854,7 +861,6 @@
 
 // Composite Multipage styling
 .composite_form.paged {
-  margin-top: $margin-xl;
   flex-direction: row;
   position: relative;
   min-height: 550px;
@@ -862,9 +868,7 @@
   position: relative;
 
   .cp_multipage_footer {
-    // position: absolute;
-    // bottom: 8px;
-    // right: 150px;
+    position: relative;
     margin-top: $margin-md;
     width: 100%;
     display: flex;
@@ -878,12 +882,16 @@
 
       .cp_totals {
         height: fit-content;
-        padding: $padding-md;
+        padding: 15px;
         background: #e8edf0;
         border-radius: 4px;
         width: fit-content;
         font-weight: bold;
         margin-left: auto;
+        position: absolute;
+        right: 160px;
+        top: -68px;
+        padding-right: 40px;
       }
       .cp_totals__after {
         font-size: $font-md;
@@ -1033,8 +1041,12 @@
       display: flex;
       gap: 40px;
       .component_description_wrapper {
-        flex: 0 1 200px;
-        // max-width: 30%;
+        flex: 0 1 35%;
+        .component__thumbnail__image {
+          background-size: cover;
+          height: 300px;
+          width: 100%;
+        }
       }
       .component_selections {
         flex: 1;
@@ -1044,10 +1056,6 @@
         border-radius: 5px;
         overflow: hidden;
         margin-bottom: $margin-lg;
-        .component__thumbnail__image {
-          height: 200px;
-          width: 200px;
-        }
       }
       .component_option_radio_buttons_container {
         > li {
@@ -1125,13 +1133,32 @@
 
         .composited_product_details_wrapper {
           .variations {
-            margin-top: $margin-md;
             display: flex;
             gap: $gap-md;
             > div {
               flex: 1;
               select {
                 width: 100%;
+              }
+            }
+            tbody {
+              display: flex;
+              width: 100%;
+              gap: $gap-md;
+              > tr {
+                flex: 1;
+                td.label {
+                  padding-top: 0px;
+                  label {
+                    font-size: $font;
+                  }
+                }
+                select {
+                  background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/chevron-blue.svg');
+                  background-repeat: no-repeat;
+                  background-position: right 15px center;
+                  background-size: 10% contain;
+                }
               }
             }
           }
@@ -1154,6 +1181,9 @@
           .quantity_button {
             &::before {
               content: "Aantal?";
+              font-size: $font;
+              font-weight: 600;
+              color: $primary-color;
             }
           }
           &::after {
@@ -1219,14 +1249,6 @@
   }
 
   > .cart {
-    //   position: absolute;
-    //   left: 0px;
-    //   top: 0px;
-    //   width: 100%;
-    //   height: 100% !important;
-    //   background-color: white;
-    //   z-index: 20;
-
     .composite_summary {
       .summary_elements {
         display: flex;
@@ -1364,6 +1386,36 @@
   }
 }
 
+.woocommerce-variation-price {
+  .price {
+    .amount {
+      bdi {
+        font-size: 30px;
+        font-weight: 800;
+        color: $primary-color;
+        > sup {
+          font-weight: 800;
+          font-size: 18px;
+          position: relative;
+          top: 2px;
+        }
+      }
+    }
+    .woocommerce-price-suffix {
+      opacity: 0.4;
+    }
+  }
+}
+
+.accessoires .single_variation_wrap {
+  margin-top: 30px !important;
+  .woocommerce-variation {
+    margin-top: auto;
+    margin-bottom: 5px;
+  }
+}
+
+
 // Composite pagination cleanup
 .composite_form .composite_pagination .pagination_element {
   background: none;
@@ -1414,6 +1466,13 @@ ul li::before {
   }
 }
 
+.component_options_select {
+  background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/chevron-blue.svg');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 10% contain;
+}
+
 // Product Modal SCSS
 .product-added-modal {
   display: none;
@@ -1441,10 +1500,19 @@ ul li::before {
       margin-bottom: 30px;
     }
 
+    .product__card {
+      width: 100%;
+      .card__price {
+        .from {
+          display: none;
+        }
+      }
+      .info__heading {
+        font-size: $font;
+      }
+    }
+
     .pam-heading {
-      // display: grid;
-      // grid-template-columns: 10% 1fr;
-      // gap: 30px;
       display: flex;
       gap: $gap-xl;
       align-items: center;
@@ -1457,6 +1525,8 @@ ul li::before {
       }
       .pam-heading__image {
         flex: 0 0 20%;
+        border-radius: 10px;
+        overflow: hidden;
       }
       h3 {
         color: #1c5072;
@@ -1477,6 +1547,15 @@ ul li::before {
 
     .pam-extras {
       padding: 40px;
+      position: relative;
+
+      .swiper-button-next {
+        right: 20px;
+      }
+
+      .swiper-button-prev {
+        left: 20px;
+      }
 
       .pam-extra-warning {
         h4 {
@@ -1486,12 +1565,14 @@ ul li::before {
           span {
             display: flex;
             margin-right: 6px;
+            line-height: 0.9;
           }
 
           svg {
             width: 20px;
             align-items: center;
             margin-right: 7px;
+            margin-top: -2px;
           }
         }
       }
@@ -1514,6 +1595,7 @@ ul li::before {
         a,
         span {
           color: #e39a3f;
+          cursor: pointer;
         }
       }
 
@@ -1531,8 +1613,8 @@ ul li::before {
           border-radius: 4px;
           padding: 15px 25px;
           color: #1f3f58;
-          font-size: 15px;
-          font-weight: 500;
+          font-size: $font;
+          font-weight: 800;
           box-shadow: 3px 3px #d2dce3;
 
           svg {
@@ -1644,6 +1726,7 @@ ul li::before {
 
 .pamSwiper {
   padding: 15px !important;
+  margin: 0 -15px !important;
 }
 
 .pam-swiper-slide img {
@@ -1655,37 +1738,17 @@ ul li::before {
 }
 
 .fade-in-bottom {
-  -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
-    both;
   animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-
-@-webkit-keyframes fade-in-bottom {
-  0% {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 @keyframes fade-in-bottom {
   0% {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
     opacity: 1;
   }
 }
-
 
 #moreCats {
   .more__specs {
@@ -1721,7 +1784,7 @@ ul li::before {
       line-height: 1;
       .facetwp-counter {
         font-size: 15px;
-        opacity: 0.6;
+        color: #949494;
       }
       &::before {
         content: '';

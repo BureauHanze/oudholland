@@ -100,7 +100,6 @@ do_action('woocommerce_sidebar');
             <div class="pam-extras">
                 <div class="pam-extra-warning">
                     <h4><span style="color: #E39A3F">
-
                     
                     <svg width="22px" height="20px" viewBox="0 0 22 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <defs>
@@ -131,16 +130,15 @@ do_action('woocommerce_sidebar');
                     <?php endforeach; ?>
                 </div>
                 <div class="pam-extra-footer">
-                    <p class="pam-footer-text">Geen accesoires nodig? <a href="">Direct bestellen</a> of <span
+                    <p class="pam-footer-text">Geen accesoires nodig? <a href="/winkelwagen/">Direct bestellen</a> of <span
                                 onclick="closePAM()">winkel verder</span></p>
-                    <a href="">
-                        <button><?php get_template_part('assets/svg/plus-icon') ?> Bekijk de accessoires</button>
+                    <a class="btn btn-secondary" href="/bureau-accessoires/">
+                        <?php get_template_part('assets/svg/plus-icon') ?> Bekijk de accessoires
                     </a>
                 </div>
             </div>
 
         </div>
-
     </div>
 
     <!-- Standard Modal -->
@@ -148,7 +146,7 @@ do_action('woocommerce_sidebar');
         <div class="product-modal-content">
             <span class="product-modal-close" onclick="closePAM()">&times;</span>
             <div class="pam-heading">
-                <div>
+                <div class="pam-heading__image">
                     <?php
                     $product = wc_get_product();
 
@@ -166,13 +164,9 @@ do_action('woocommerce_sidebar');
                 <div class="pam-extra-accesoires">
                     <div class="swiper pamSwiper">
                         <div class="swiper-wrapper">
-                            <?php
-
-
-
+                            <?php                            
                              $post = get_queried_object();
                              $upsells = $product->get_upsell_ids();
-
 
                              // Fallback for when there are no upsells selected
                              if (!$upsells): $upsells = ''; endif;
@@ -181,8 +175,6 @@ do_action('woocommerce_sidebar');
 
                              $args = array(
                                  'post_type'         => 'product',
-                                 'ignore_sticky_posts' => 1,
-                                 'no_found_rows'       => 1,
                                  'posts_per_page'    => 6,
                                  'post__in'          => $upsells,
                                  'post__not_in'      => array( $post->ID ),
@@ -197,7 +189,8 @@ do_action('woocommerce_sidebar');
                                      ?>
                                      <div class="pam-swiper-slide swiper-slide">
                                          <?php
-                                         get_template_part('template-parts/cards/modal-product');?>
+                                        //  the_title();
+                                         get_template_part('template-parts/cards/product');?>
                                      </div>
                                  <?php
                                  endwhile;

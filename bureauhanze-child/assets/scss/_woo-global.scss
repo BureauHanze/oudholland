@@ -412,3 +412,12 @@ sup {
         background-size: contain;
     }
 }
+
+.container {
+    padding: 0;
+    padding-top: $padding-lg;
+    padding-bottom: $padding-lg;
+    @media(max-width:$container-width) {
+        padding: $padding-lg;
+    }
+}

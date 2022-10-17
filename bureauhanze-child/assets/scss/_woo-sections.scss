@@ -750,10 +750,13 @@
             .categories {
                 display: inline-flex;
                 flex-direction: column;
-                gap: $gap-md;
-                margin-bottom: 48px;
+                gap: 5px;
+                margin-bottom: $margin-lg;
                 a {
                     text-decoration: none;
+                    > span {
+                        font-size: 15px;
+                    }
                     &:hover {
                         text-decoration: underline;
                     }
@@ -938,7 +941,6 @@
         font-size: $font-xxl;
     }
     .container {
-        // padding: 0;
         .swiper-slide {
             display: flex;
             border-radius: 5px;
@@ -1395,10 +1397,4 @@
             }
         }
     }
-}
-
-.container {
-    padding: 0;
-    padding-top: $padding-lg;
-    padding-bottom: $padding-lg;
 }

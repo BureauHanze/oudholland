@@ -61,7 +61,6 @@ if(get_field('product_template') == 'accessoires' ) : ?>
 <div id="multipageFooter" class="cp_multipage_footer">
 	<div class="container">
 		<div class="cp_totals">Totaalprijs: <span id="productTotals"></span> <span class="cp_totals__after">excl. btw</span></div>
-		<a href="/afrekenen" title="Afrekenen" class="checkout">Direct afrekenen</a>
 	</div>
 </div>
 <?php

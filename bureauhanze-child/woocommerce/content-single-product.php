@@ -79,10 +79,12 @@ $product = wc_get_product(); ?>
 		
 			<div class="product_info">
 				<div class="first__row">
+					<?php if(get_the_content()): ?>
 					<div class="info__description">
 						<h3 class="description_title">Productbeschrijving</h3>
 						<?php the_content(); ?>
 					</div>
+					<?php endif; ?>
 					<?php 
 					if( have_rows('advantages') ): ?>
 					<div class="info__advantages">

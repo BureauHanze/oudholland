@@ -297,62 +297,15 @@ window.addEventListener('load', (event) => {
     }
 });
 
-
-// addEventListener('load', () => {
-//     var priceOffer = document.querySelector(".woocommerce-Price-amount");
-//     if(priceOffer) {
-//         var result = priceOffer.innerText;
-//         var resultfix = result.replace(/,/g, '.');
-//         var resultcalc = (resultfix * 1.21).toFixed(2);
-//         var finalResult = resultcalc.replace('.', ',');
-//         document.querySelector(".sale-amount__regular-price bdi").innerHTML = finalResult + " ";
-//     }
-// });
-
-
-
-
-// addEventListener('load', () => {
-//     let componentTile = document.querySelectorAll('.component_option_thumbnail');
-//     console.log('loaded');
-//     for(let i = 0; i < componentTile.length; i++){
-
-
-//         componentTile[i].addEventListener('click', function() {
-//             console.log('clicked');
-//         });
-
-
-
-//             // let priceInclVat = document.querySelector('.woocommerce-Price-amount').innerText;
-//             // let priceExclVat = document.getElementById('incVATprice').innerText;
-//             // priceInclVatWithPoint = priceInclVat.replace(/,/g, '.');
-//             // console.log(priceInclVatWithPoint);
-
-
-//             // var resultfix = result.replace(/,/g, '.');
-//             // var resultcalc = (resultfix * 1.21).toFixed(2);
-//             // var finalResult = resultcalc.replace('.', ',');
-//             // document.getElementById("incVATprice").innerHTML = finalResult;
-
-
-//             // var input = document.querySelector(".composite_data > div > div.compositeprice_wrapper > div.composite_price > p span");
-//             // if(input) {
-//             //     var result = input.innerText;
-//             //     var resultfix = result.replace(/,/g, '.');
-//             //     var resultcalc = (resultfix * 1.21).toFixed(2);
-//             //     var finalResult = resultcalc.replace('.', ',');
-//             //     document.getElementById("incVATprice").innerHTML = finalResult;
-//             // }
-
-
-
-//     };
-
-
-// });
-
 //Timed out function for VAT Price for Accessoires
 function incVATtime() {
     setTimeout(incVAT, 500);
+}
+
+
+//Interval for totalprice Accessoires box
+var productPrice = document.getElementById('priceWatch');
+
+if (productPrice) {
+    setInterval(productTotal, 1000)
 }

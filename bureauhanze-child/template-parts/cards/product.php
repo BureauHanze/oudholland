@@ -29,13 +29,6 @@ $product = wc_get_product();
             <p class="price card__price"><?php echo $product->get_price_html(); ?></p>
 
             <div class="footer__buttons">
-                <!-- <a onclick="productModal('<?php the_title(); ?>', '<?php echo get_permalink(); ?>', '<?php echo wp_get_attachment_url( $product->get_image_id() ); ?>')"
-                class="btn btn-secondary ajax_add_to_cart add_to_cart_button"
-                href="<?php echo $product->add_to_cart_url(); ?>"
-                value="<?php echo esc_attr( $product->get_id() ); ?>"
-                data-product_id="<?php echo get_the_ID(); ?>"
-                data-product_sku="<?php echo esc_attr($sku) ?>"
-                aria-label="Add “<?php the_title_attribute() ?>” to your cart"><?php get_template_part('/assets/svg/cart');?></a> -->
                 <a class="btn btn-primary-icon" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php get_template_part( 'assets/svg/chevron' ); ?></a>
             </div>
 

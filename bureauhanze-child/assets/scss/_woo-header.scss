@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    // overflow-x: hidden;
+    z-index: 9999;
     .header__circles {
         position: absolute;
         top: 0;
