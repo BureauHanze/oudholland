@@ -401,9 +401,7 @@ div.woocommerce_cart_outer > form {
     }
 
     .product-name {
-        @media (min-width: 670px) {
-            border-right: solid 1px #D8D8D8;
-        }
+
 
         .edit_composite_in_cart_text {
             small {
@@ -730,4 +728,13 @@ div.woocommerce_cart_outer > form {
             display: none;
         }
     }
+}
+
+
+
+.woocommerce-cart-form__cart-item {
+    display: grid;
+    grid-template-columns: 1fr 12% 12%;
+    gap: $gap-md;
+    width: 100%;
 }
