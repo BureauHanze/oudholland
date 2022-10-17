@@ -179,6 +179,14 @@ do_action('woocommerce_sidebar');
                                  'post__in'          => $upsells,
                                  'post__not_in'      => array( $post->ID ),
                                  'meta_query'        => $meta_query,
+                                 'tax_query'         => array(
+                                    array(
+                                        'taxonomy' => 'product_visibility',
+                                        'field'    => 'name',
+                                        'terms'    => 'exclude-from-catalog',
+                                        'operator' => 'NOT IN',
+                                    ),
+                                ),
                              );
 
                              $featured_query = new WP_Query($args);
@@ -189,7 +197,6 @@ do_action('woocommerce_sidebar');
                                      ?>
                                      <div class="pam-swiper-slide swiper-slide">
                                          <?php
-                                        //  the_title();
                                          get_template_part('template-parts/cards/product');?>
                                      </div>
                                  <?php
