@@ -19,20 +19,18 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
 
+<div class="cart__intro">
+	<h1><?php the_title(); ?></h1>
+</div>
+
 <div class="woocommerce_cart_outer">
 
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 	<div class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
-		<div>
-			<div class="cart_head">
-				<div class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></div>
-				<div class="product-quantity"><?php esc_html_e( 'Aantal', 'woocommerce' ); ?></div>
-				<div class="product-subtotal"><?php esc_html_e( 'Prijs', 'woocommerce' ); ?></div>
-			</div>
-		</div>
-		<div class="ddas">
+
+		<div class="cart__wrapper">
 			<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
 			<?php
@@ -117,10 +115,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 							),
 							$cart_item_key
 						);
-						get_template_part('assets/svg/trash');
-
-
-
 
 						echo 'Verwijderen</a>';
 						?>
@@ -167,6 +161,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
 <div class="cart-collaterals">
+	<div class="cart__totals__wrapper">
 	<?php
 		/**
 		 * Cart collaterals hook.
@@ -177,6 +172,15 @@ do_action( 'woocommerce_before_cart' ); ?>
 		do_action( 'woocommerce_cart_collaterals' );
 
 	?>
+	</div>
+
+	<div class="payment-options">
+    	<?php echo get_template_part( '/assets/svg/ideal' ); ?>
+    	<?php echo get_template_part( '/assets/svg/mastercard-logo' ); ?>
+    	<?php echo get_template_part( '/assets/svg/visa' ); ?>
+    	<?php echo get_template_part( '/assets/svg/apple-pay' ); ?>
+	</div>
+
 </div>
 
 </div>

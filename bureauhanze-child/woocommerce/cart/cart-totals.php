@@ -116,11 +116,3 @@ defined('ABSPATH') || exit;
     <?php do_action('woocommerce_after_cart_totals'); ?>
 
 </div>
-
-
-<div class="payment-options">
-    <?php echo get_template_part( '/assets/svg/ideal' ); ?>
-    <?php echo get_template_part( '/assets/svg/mastercard-logo' ); ?>
-    <?php echo get_template_part( '/assets/svg/visa' ); ?>
-    <?php echo get_template_part( '/assets/svg/apple-pay' ); ?>
-</div>

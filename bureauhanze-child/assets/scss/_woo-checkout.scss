@@ -651,4 +651,31 @@
     border-radius: $border-radius-xxs;
   }
   
-  
+  .checkout label {
+    width: auto;
+  }
+
+  .checkout .product-name > dl.variation {
+    display: none;
+  }
+
+  .checkout {
+    .woocommerce-Price-amount {
+      text-align: right;
+      bdi {
+          display: flex;
+          font-weight: 700;
+          color: $primary-color;
+          justify-content: flex-end;
+      }
+      sup {
+          font-size: inherit;
+          transform: none;
+          display: inherit;
+      }
+    }
+
+    .shop_table .cart_item .product-name {
+      width: 100%;
+    }
+  }
