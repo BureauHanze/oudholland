@@ -90,9 +90,8 @@
           // .swiper-wrapper {
           //     overflow: hidden;
           // }
-
         }
-        
+
         .thumbSwiper {
           // .swiper-wrapper {
           //     display: grid;
@@ -146,7 +145,21 @@
         margin-right: $margin-md;
       }
     }
-    &.product-type-composite {
+    .product-type-simple,
+    .product-type-variable {
+      .stock {
+        display: none;
+      }
+    }
+    .product-type-variable {
+      .price {
+        display: none;
+      }
+    }
+    .product-type-composite {
+      .price {
+        display: none;
+      }
       p.price,
       .stock,
       .product_values {
@@ -519,24 +532,7 @@
     // }
   }
 
-  .product-usps {
-    display: flex;
-    gap: $gap-md;
-    justify-content: space-between;
-    .usps__usp {
-      display: flex;
-      gap: $gap-sm;
-      color: $yellow;
-      align-items: center;
-      font-weight: bold;
-      font-size: $font-md;
-      margin-top: $margin-md;
-      svg {
-        height: 100%;
-        width: 14px;
-      }
-    }
-  }
+
 
   .component_option_thumbnails {
     ul.component_option_thumbnails_container {
@@ -698,18 +694,6 @@
     }
   }
 
-  .component_options_select {
-    min-width: 0;
-    width: 100%;
-    border: solid 1px;
-    background-color: #e8edf0;
-    color: #1f3f58;
-    border-radius: 5px;
-    padding: 14px 10px;
-    font-size: $font;
-    appearance: none;
-  }
-
   .compositeprice_wrapper {
     display: flex;
     gap: 20px;
@@ -748,23 +732,23 @@
     }
   }
 }
-.composite_wrap {
-  .single_add_to_cart_button {
-    display: block;
-    width: 100%;
-    background-color: #e39a3f !important;
-    font-size: $font-lg;
-    color: #1f3f58 !important;
-    font-weight: 500;
-    padding: 18px 22px;
-    text-align: center;
-    border: 1px solid transparent;
-    &:hover {
-      box-shadow: 3px 3px 0 0 $primary-color;
-      border: 1px solid $primary-color;
-    }
-  }
-}
+// .composite_wrap {
+//   // .single_add_to_cart_button {
+//   //   display: block;
+//   //   width: 100%;
+//   //   background-color: #e39a3f !important;
+//   //   font-size: $font-lg;
+//   //   color: #1f3f58 !important;
+//   //   font-weight: 500;
+//   //   padding: 18px 22px;
+//   //   text-align: center;
+//   //   border: 1px solid transparent;
+//   //   &:hover {
+//   //     box-shadow: 3px 3px 0 0 $primary-color;
+//   //     border: 1px solid $primary-color;
+//   //   }
+//   }
+// }
 
 .single_product {
   .header__overlay {
@@ -1154,7 +1138,7 @@
                   }
                 }
                 select {
-                  background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/chevron-blue.svg');
+                  background-image: url("/wp-content/themes/bureauhanze-child/assets/svg/chevron-blue.svg");
                   background-repeat: no-repeat;
                   background-position: right 15px center;
                   background-size: 10% contain;
@@ -1415,7 +1399,6 @@
   }
 }
 
-
 // Composite pagination cleanup
 .composite_form .composite_pagination .pagination_element {
   background: none;
@@ -1464,13 +1447,6 @@ ul li::before {
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
-}
-
-.component_options_select {
-  background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/chevron-blue.svg');
-  background-repeat: no-repeat;
-  background-position: right 15px center;
-  background-size: 10% contain;
 }
 
 // Product Modal SCSS
@@ -1778,7 +1754,7 @@ ul li::before {
     gap: 10px;
     .facetwp-checkbox {
       background: none;
-      padding: 0;    
+      padding: 0;
       display: flex;
       align-items: center;
       line-height: 1;
@@ -1787,7 +1763,7 @@ ul li::before {
         color: #949494;
       }
       &::before {
-        content: '';
+        content: "";
         width: 14px;
         height: 14px;
         display: inline-flex;
@@ -1803,5 +1779,31 @@ ul li::before {
       }
     }
   }
+}
 
+.product-type-simple {
+  .cart {
+    display: flex;
+    gap: $gap-lg;
+  }
+}
+
+.variations_form {
+  display: flex;
+  flex-direction: column;
+
+  .label label {
+    text-align: left;
+  }
+  .woocommerce-variation-add-to-cart {
+    display: flex;
+    gap: $gap-lg;
+  }
+}
+
+.single_variation_wrap {
+  .price {
+    display: block !important;
+    margin-bottom: $margin-lg;
+  }
 }

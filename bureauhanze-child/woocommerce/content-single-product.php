@@ -75,7 +75,19 @@ $product = wc_get_product(); ?>
 				 */
 				do_action( 'woocommerce_single_product_summary' );
 				?>
+
+				<?php
+				if ( $product->is_type( 'variable' ) || $product->is_type( 'simple' )) : ?>
+				<div class="product-usps">
+					<div class="usps__usp"><?php get_template_part('assets/svg/check'); ?>5 jaar garantie</div>
+					<div class="usps__usp"><?php get_template_part('assets/svg/check'); ?>Gratis bezorging</div>
+					<div class="usps__usp"><?php get_template_part('assets/svg/check'); ?>Inclusief montage</div>
+				</div>
+				<?php
+				endif; ?>
+				
 			</div>
+			
 		
 			<div class="product_info">
 				<div class="first__row">

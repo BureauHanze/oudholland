@@ -284,7 +284,7 @@ add_filter('woocommerce_show_variation_price',      function() { return TRUE;});
 
 
 // Price
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 // add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 20 );
 
 

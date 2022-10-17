@@ -53,13 +53,7 @@ do_action('woocommerce_after_main_content');
  *
  * @hooked woocommerce_get_sidebar - 10
  */
-do_action('woocommerce_sidebar');
-?>
-
-<?php
-
-
-?>
+do_action('woocommerce_sidebar'); ?>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 

@@ -241,9 +241,7 @@ ol {
                         height: 9px;
                         width: 22px;
                     }
-
                 }
-
             }
         }
     }
@@ -392,6 +390,9 @@ sup {
     transform: translateX(-4px);
 }
 
+
+
+
 .single_add_to_cart_button {
     position: relative;
     width: 100%;
@@ -413,6 +414,22 @@ sup {
     }
 }
 
+.single_add_to_cart_button {
+    display: block;
+    width: 100%;
+    background-color: #e39a3f !important;
+    font-size: $font-lg;
+    color: #1f3f58 !important;
+    font-weight: 500;
+    padding: 18px 22px;
+    text-align: center;
+    border: 1px solid transparent;
+    &:hover {
+      box-shadow: 3px 3px 0 0 $primary-color;
+      border: 1px solid $primary-color;
+    }
+}
+
 .container {
     padding: 0;
     padding-top: $padding-lg;
@@ -421,3 +438,41 @@ sup {
         padding: $padding-lg;
     }
 }
+
+
+
+.component_options_select,
+.variations select {
+    background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/chevron-blue.svg');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 10% contain;
+    min-width: 0;
+    width: 100%;
+    border: solid 1px;
+    background-color: #e8edf0;
+    color: #1f3f58;
+    border-radius: 5px;
+    padding: 14px 10px;
+    font-size: $font;
+    appearance: none;
+}
+
+.product-usps {
+    display: flex;
+    gap: $gap-md;
+    justify-content: space-between;
+    .usps__usp {
+      display: flex;
+      gap: $gap-sm;
+      color: $yellow;
+      align-items: center;
+      font-weight: bold;
+      font-size: $font-md;
+      margin-top: $margin-md;
+      svg {
+        height: 100%;
+        width: 14px;
+      }
+    }
+  }
