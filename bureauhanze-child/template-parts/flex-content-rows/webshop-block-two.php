@@ -4,7 +4,7 @@ if( $featured_posts ): ?>
 <section class="flex-content flex-content-webshop-block-two">
     <div class="row">
         <div class="container">
-            <h3 class="webshop-block-two__heading">In onze websshop</h3>
+            <h3 class="webshop-block-two__heading">In onze webshop</h3>
         </div>
     </div>
     <div class="row">

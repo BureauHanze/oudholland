@@ -181,12 +181,12 @@
         }
         .container {
             padding-top: $padding-lg;
-            .flex-content {
-                .container {
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-            }
+            // .flex-content {
+            //     .container {
+            //         padding-left: 0;
+            //         padding-right: 0;
+            //     }
+            // }
         }
 
     }

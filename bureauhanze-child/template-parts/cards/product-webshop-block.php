@@ -8,9 +8,16 @@ $sale_price = wc_price($product->get_price_excluding_tax(1,$product->get_sale_pr
     </div>
     <div class="product__content">
         <h3><?php the_title(); ?></h3>
-        <div class="content__prices">
-            <!-- <p class="sale-amount__price"><?php echo $sale_price; ?></p> -->
-            <p class="sale-amount__regular-price"><span><?php echo $regular_price; ?></span><span class="price__suffix">excl. btw</span></p>
+
+
+        <div class="card__footer">
+            <p class="price card__price"><?php echo $product->get_price_html(); ?></p>
+
+            <div class="footer__buttons">
+                <a class="btn btn-primary-icon" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php get_template_part( 'assets/svg/chevron' ); ?></a>
+            </div>
+
         </div>
+        
     </div>
 </a>

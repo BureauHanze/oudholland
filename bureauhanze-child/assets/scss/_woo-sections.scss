@@ -7,7 +7,6 @@
 .flex-content {
     overflow: hidden;
     .container {
-        padding: 0;
         padding-top: $padding-xl;
         padding-bottom: $padding-lg;
         @media(max-width: $desktop){
@@ -184,6 +183,9 @@
         .row {
             display: flex;
             gap: $gap-xl;
+            @media(max-width: $desktop){
+                flex-direction: column;
+            }
             .flex-content-webshop-block__paragraph {
                 .btn {
                     margin-top: $margin-lg;
@@ -195,11 +197,41 @@
                 flex: 0 0 50%;
                 justify-content: space-between;
                 gap: $gap-xl;
+                @media(max-width: $tablet){
+                    gap: $gap-lg;
+                }
+                @media(max-width: $mobile){
+                    flex-direction: column;
+                }
                 .products__product {
                     background: white;
                     aspect-ratio: 1;
                     width: 100%;
                     border-radius: 5px;
+                    box-shadow: 5px 5px 0 0 rgb(0 0 0 / 15%);
+                    .webshop-block__product {
+                        text-decoration: none;
+
+                    }
+                    .product__image {
+                        img {
+                            max-height: 220px;
+                            object-fit: contain;
+                        }
+                    }
+                    .product__content {
+                        padding: $padding-md;
+                        h3 {
+                            font-size: $font-xl;
+
+                        }
+                        .content__prices {
+                            p, span {
+                                color: black;
+                                margin: 0;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1398,3 +1430,10 @@
         }
     }
 }
+
+// .row-main-flex-content {
+//     padding: 0 $padding-xl;
+//     @media(max-width: $mobile){
+//         padding: 0 $padding-lg;
+//     }
+// }
