@@ -11,12 +11,31 @@ if(function_exists('add_theme_support')) {
 }
 
 // Format WooCommerce price for products
-add_filter('formatted_woocommerce_price', 'ts_woo_decimal_price', 10, 5);
-function ts_woo_decimal_price($formatted_price, $price, $decimal_places, $decimal_separator, $thousand_separator)
-{
-    $unit = number_format(intval($price), 0, $decimal_separator, $thousand_separator);
-    $decimal = sprintf('%02d', ($price - intval($price)) * 100);
-    return $unit . ',' . '<sup>' . $decimal . '</sup>';
+// add_filter('formatted_woocommerce_price', 'ts_woo_decimal_price', 10, 5);
+// function ts_woo_decimal_price($formatted_price, $price, $decimal_places, $decimal_separator, $thousand_separator)
+// {
+//     $unit = number_format(intval($price), 0, $decimal_separator, $thousand_separator);
+//     $decimal = sprintf('%02d', ($price - intval($price)) * 100);
+//     return $unit . ',' . '<sup>' . $decimal . '</sup>';
+// }
+
+add_filter( 'formatted_woocommerce_price', 'dcwd_superscript_wc_formatted_price', 10, 5 );
+function dcwd_superscript_wc_formatted_price( $formatted_price, $price, $decimal_places, $decimal_separator, $thousand_separator ) {
+	// Leave prices unchanged in Dashboard.
+	if ( is_admin() ) {
+		return $formatted_price;
+	}
+
+	// Format units, including thousands separator if necessary.
+	$unit = number_format( intval( $price ), 0, $decimal_separator, $thousand_separator );
+	// Format decimals, with leading zeros as necessary (e.g. for 2 decimals, 0 becomes 00, 3 becomes 03 etc).
+	$decimal = '';
+	$num_decimals = wc_get_price_decimals();
+	if ( $num_decimals ) {
+		$decimal = sprintf( '<span class="seperator">' . $decimal_separator . '</span><sup>%0'.$num_decimals.'d</sup>', round( ( $price - intval( $price ) ) * 100 ) );
+	}
+
+	return $unit . $decimal;
 }
 
 

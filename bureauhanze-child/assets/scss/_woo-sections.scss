@@ -5,7 +5,9 @@
 }
 
 .flex-content {
-    overflow: hidden;
+    @media(max-width: $tablet){
+        overflow: hidden;
+    }
     .container {
         padding-top: $padding-xl;
         padding-bottom: $padding-lg;
@@ -697,6 +699,7 @@
         border-radius: 5px;
         padding: $padding-xl;
         background: linear-gradient(143.32deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+        background-position: center center;
         box-shadow: 6px 6px 0 0 rgba(0,0,0,0.15);
         transition: all $main-transition;
         @media(max-width: 1400px){

@@ -35,7 +35,7 @@
         </div>
         <div class="row row-banner">
             <h2>Hulp nodig bij uw<br/>kantoorinrichting?</h2>
-            <a class="btn" href="">Wij helpen u graag verder</a>
+            <a class="btn" href="/contact/" title="Contact">Wij helpen u graag verder</a>
         </div>
 
         <div class="row row-information">
