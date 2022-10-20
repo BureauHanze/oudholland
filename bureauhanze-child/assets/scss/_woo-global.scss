@@ -442,13 +442,14 @@ sup {
 
 
 .component_options_select,
-.variations select {
+.variations select,
+.wc-pao-addon-select {
     background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/chevron-blue.svg');
     background-repeat: no-repeat;
     background-position: right 15px center;
     background-size: 10% contain;
     min-width: 0;
-    width: 100%;
+    width: 100% !important;
     border: solid 1px;
     background-color: #e8edf0;
     color: #1f3f58;

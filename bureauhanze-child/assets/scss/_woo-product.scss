@@ -14,7 +14,7 @@
       }
       &.last {
         background-color: white;
-        z-index: 20;
+        z-index: 1;
         padding-bottom: 100px;
         margin-bottom: -100px !important;
       }
@@ -177,7 +177,7 @@
         a {
           font-size: $font-md;
           text-decoration: none;
-          padding: 20px;
+          // padding: 20px;
           text-align: center;
           justify-content: center;
         }
@@ -478,6 +478,9 @@
   }
   .composited_product_title_wrapper {
     padding-top: 5px;
+    .clear_component_options_wrapper {
+      margin: 0;
+    }
   }
   &:not(.paged) .component .component_inner {
     margin-bottom: $margin-lg;
@@ -727,7 +730,7 @@
 
   .cart {
     .composite_wrap {
-      margin-top: $margin-md;
+      margin-top: 48px;
       padding: 0;
     }
   }

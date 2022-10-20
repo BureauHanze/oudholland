@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    z-index: 999;
+    // z-index: 999;
     .header__circles {
         position: absolute;
         top: 0;
@@ -21,6 +21,9 @@
             border-radius: 50%;
             z-index: -1;
             pointer-events: none;
+            @media(max-width: $tablet){
+                opacity: 0.2;
+            }
         }
         .header__circle-yellow {
             top: 15%;

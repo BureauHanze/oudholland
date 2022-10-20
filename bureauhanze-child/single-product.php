@@ -124,9 +124,8 @@ do_action('woocommerce_sidebar'); ?>
                     <?php endforeach; ?>
                 </div>
                 <div class="pam-extra-footer">
-                    <p class="pam-footer-text">Geen accesoires nodig? <a href="/winkelwagen/">Direct bestellen</a> of <span
-                                onclick="closePAM()">winkel verder</span></p>
-                    <a class="btn btn-secondary" href="/bureau-accessoires/">
+                    <p class="pam-footer-text">Geen accesoires nodig? <a href="/winkelwagen/">Direct bestellen</a> of <span onclick="closePAM()">winkel verder</span></p>
+                    <a class="btn btn-secondary" href="/webshop/geen-categorie/bureau-accessoires/">
                         <?php get_template_part('assets/svg/plus-icon') ?> Bekijk de accessoires
                     </a>
                 </div>
