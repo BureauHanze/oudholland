@@ -13,7 +13,7 @@ if( $featured_posts ): ?>
             <?php 
             foreach( $featured_posts as $post ): 
             setup_postdata($post);
-                get_template_part('template-parts/cards/product-webshop-block');
+                get_template_part('template-parts/cards/product-webshop');
             endforeach; ?>
             </div>
         </div>

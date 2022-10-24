@@ -17,7 +17,7 @@
                     setup_postdata($post); ?>
                     <div class="products__product">
                         <?php 
-                        get_template_part('template-parts/cards/product-webshop-block'); 
+                        get_template_part('template-parts/cards/product-webshop'); 
                         ?>
                     </div>
                 <?php 

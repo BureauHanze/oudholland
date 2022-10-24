@@ -224,13 +224,37 @@
                     .product__content {
                         padding: $padding-md;
                         h3 {
-                            font-size: $font-xl;
-
+                            font-size: $font-lg;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                bottom: -16px;
+                                left: 0;
+                                height: 3px;
+                                width: 28%;
+                                background-color: $yellow;
+                            }
                         }
+                        // .content__prices {
+                        //     p, span {
+                        //         color: black;
+                        //         margin: 0;
+                        //     }
+                        // }
                         .content__prices {
-                            p, span {
-                                color: black;
+                            display: flex;
+                            gap: $gap-lg;
+                            margin-top: $margin-lg;
+                            p {
+                                font-size: $font-xl;
+                                font-weight: bold;
                                 margin: 0;
+                                color: #2F2F2F;
+                                .from,
+                                .woocommerce-price-suffix {
+                                    color: #8F8F8F;
+                                    font-size: $font-sm;
+                                }
                             }
                         }
                     }
@@ -1218,11 +1242,14 @@
                 display: flex;
                 align-items: center;
                 gap: $gap-lg;
-                padding: 32px;
+                padding: 48px 32px;
                 background: white;
                 border-radius: 5px;
                 text-decoration: none;
                 box-shadow: 3px 3px 0 0 rgba(0,0,0,0.15);
+                @media(max-width: $tablet){
+                    flex-direction: column;
+                }
                 .product__image {
                     flex: 0 1 33%;
                     img {
@@ -1234,6 +1261,7 @@
                     flex-direction: column;
                     justify-content: space-between;
                     height: 100%;
+
                     h3 {
                         font-size: $font-lg;
                         &::after {
@@ -1249,23 +1277,22 @@
                     .content__prices {
                         display: flex;
                         gap: $gap-lg;
+                        margin-top: $margin-lg;
                         p {
-                            font-size: $font-xl;
+                            font-size: $font-xxl;
                             font-weight: bold;
                             margin: 0;
-                            .price__suffix {
+                            .from,
+                            .woocommerce-price-suffix {
                                 color: #8F8F8F;
                                 font-size: $font-sm;
-                                margin-left: $margin-md;
                             }
                         }
                     }
                 }
             }
         }
-
     }
-
 }
 
 
