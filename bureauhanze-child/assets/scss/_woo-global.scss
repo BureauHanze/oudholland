@@ -443,7 +443,8 @@ sup {
 
 .component_options_select,
 .variations select,
-.wc-pao-addon-select {
+.wc-pao-addon-select,
+.facetwp-dropdown {
     background-image: url('/wp-content/themes/bureauhanze-child/assets/svg/chevron-blue.svg');
     background-repeat: no-repeat;
     background-position: right 15px center;
@@ -486,3 +487,11 @@ sup {
 //         }
 //       }
 // }
+@media(max-width: $mobile){
+    .swiper-button-next {
+        right: 0px !important;
+    }
+    .swiper-button-prev {
+        left: 0px !important;
+    }
+}

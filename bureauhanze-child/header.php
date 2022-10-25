@@ -70,6 +70,10 @@ endif; ?>">
 					</div>
 				</div>
 
+				
+				<div class="header__planner">
+					<a href="https://roomplanner.pcon-solutions.com/#CONFIG=swan_ab199e45-c422-434b-bca0-dfb244d83d2b" target="_blank" rel="noopener nofollow" title="Online kantoorplanner"><?php get_template_part( 'assets/svg/map'); ?><span>Kantoorplanner</span></a>
+				</div>
 
 				<div class="header__contact">
 					<?php

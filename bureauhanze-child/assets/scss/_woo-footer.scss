@@ -226,6 +226,9 @@
             width: 32px;
             padding: $padding-sm;
             border-radius: 4px;
+            @media(max-width: $tablet){
+                margin-left: 0;
+            }
             svg {
                 #Home {
                     stroke: $primary-color;  

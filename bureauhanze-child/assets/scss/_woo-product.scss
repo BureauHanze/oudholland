@@ -68,9 +68,15 @@
         position: relative;
         .swiper-button-prev {
           left: -14px !important;
+          @media(max-width: $mobile){
+            left: 0px !important;
+          }
         }
         .swiper-button-next {
           right: -14px !important;
+          @media(max-width: $mobile){
+            right: 0px !important;
+          }
         }
         img {
           aspect-ratio: 4 / 3;

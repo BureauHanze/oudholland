@@ -1,5 +1,6 @@
 <section class="contact-form">
     <div class="container">
+        <h2>Stuur ons een bericht</h2>
         <?php 
         echo do_shortcode('[contact-form-7 id="9" title="Contact" html_class="form-with-animated-labels"]');
         ?>

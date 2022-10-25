@@ -116,6 +116,7 @@
                 }
                 form {
                     display: flex;
+                    align-items: center;
                     flex: 1 1 100%;
                     border-bottom: 2px solid $primary-color;
                 }
@@ -150,6 +151,32 @@
                             fill: $primary-color;
                         }
 
+                    }
+                }
+            }
+            .header__planner {
+                a {
+                    display: flex;
+                    align-items: center;
+                    margin-right: $margin-md;
+                    gap: 6px;
+                    margin-right: $margin-lg;
+                    text-decoration: none;
+                    svg {
+                        height: 18px;
+                        width: 17px;
+                        @media(max-width: 1200px){
+                            width: 22px;;
+                            height: 25px;
+                        }
+                    }
+                    span {
+                        @media(max-width: 1200px){
+                            display: none;
+                        }
+                    }
+                    &:hover {
+                        text-decoration: underline;
                     }
                 }
             }
@@ -1207,7 +1234,7 @@
                         position: absolute;
                         top: 16px;
                         right: 0;
-                        margin: auto;
+                        margin: 0 0 0 auto;
                         height: 16px;
                         width: 16px;
                         border: 1px solid #8F8F8F;
@@ -1219,9 +1246,11 @@
                         transition: all $main-transition;
                         transform: rotate(90deg);
                         pointer-events: all;
+                        opacity: 1;
+                        z-index: 999;
                     }
                     &:hover {
-                        background-color: #28404F !important;
+                        // background-color: #28404F !important;
                         &::after {
                             border: 1px solid white;
                         }

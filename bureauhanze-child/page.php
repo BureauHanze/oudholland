@@ -6,7 +6,7 @@ get_header(); ?>
     <?php
     get_template_part( 'template-parts/sections/flex-content' ); 
 
-    if(!is_page(array('over-ons', 'werkwijze', 'diensten', 'inspiratie', 'duurzaamheid', 'contact'))) :
+    if(!is_page(array('over-ons', 'werkwijze', 'diensten', 'inspiratie', 'duurzaamheid', 'contact', 'kantoormeubelen-zwolle', 'kantoormeubelen-amersfoort', 'kantoormeubelen-apeldoorn', 'klein-kantoor-inrichten'))) :
     get_template_part( 'template-parts/sections/content' ); 
     endif;
 

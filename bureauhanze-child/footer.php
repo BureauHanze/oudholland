@@ -65,17 +65,20 @@
             <div class="footer__links">
                 <div class="links__column">
                     <h3>Assortiment</h3>
-                    <a href="/webshop/kantoormeubelen/" title="Kantoormeubelen">Kantoormeubelen</a>
-                    <a href="/webshop/lockers/" title="Lockers">Lockers</a>
-                    <a href="/webshop/magazijninstellingen/" title="Magazijninstellingen">Magazijninstellingen</a>
-                    <a href="/webshop/outlet-kantoormeubulair/" title="Outlet kantoormeubulair"">Outlet kantoormeubulair</a>
+                    <a href="/webshop/bureaus/" title="Bureaus">Bureaus</a>
+                    <a href="/webshop/stoelen/" title="Stoelen">Stoelen</a>
+                    <a href="/webshop/kasten/" title="Kasten">Kasten</a>
+                    <a href="/webshop/accessoires/" title="Accessoires">Accessoires</a>
+                    <a href="/webshop/akoestiek/" title="Akoestiek">Akoestiek</a>
+                    <a href="/webshop/thuiswerkplek/" title="Thuiswerkplek">Thuiswerkplek</a>
+                    <a href="/webshop/magazijn/" title="Magazijn"">Magazijn</a>
                 </div>
                 <div class="links__column">
                     <h3>Belangrijke info</h3>
-                    <a href="/catalogus/" title="Catalogus">Catalogus</a>
+                    <a href="https://www.swan-products.nl/media/flipbooks/oudholland/index.html/" title="Catalogus" target="_blank" rel="noopener nofollow">Catalogus</a>
                     <a href="/levering/" title="Levering">Levering</a>
-                    <a href="/retourbeleid/" title="Retourbeleid">Retourbeleid</a>
-                    <a href="/veelgestelde-vragen/" title="Veelgestelde vragen">Veelgestelde vragen</a>
+                    <a href="/algemene-voorwaarden/" title="Algemene voorwaarden">Algemene voorwaarden</a>
+                    <a href="/privacy-policy/" title="Privacy policy">Privacy policy</a>
                 </div>
                 <div class="links__column">
                     <h3>In onze regio en tips</h3>
@@ -99,7 +102,7 @@
                 endif; ?> 
             </p>
             <div class="bottom__links">
-                <a href="/privacy-statement">Privacy beleid</a>
+                <!-- <a href="/privacy-statement">Privacy beleid</a> -->
                 <button id="scrollToTop" class="to-top" onclick="scrollToTop()">
                 <?php get_template_part( 'assets/svg/chevron'); ?>
                 </button>
