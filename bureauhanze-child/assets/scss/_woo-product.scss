@@ -1520,6 +1520,9 @@ ul li::before {
         margin-bottom: $margin-xs;
 
         svg {
+          position: absolute;
+          top: -16px;
+          left: -24px;
           width: 20px;
           align-items: center;
           margin-right: 7px;
@@ -1546,9 +1549,16 @@ ul li::before {
         h4 {
           color: #1c5072;
           display: flex;
+          gap: $gap-sm;
+          flex-direction: column;
+          justify-content: center;
+          @media(max-width: $tablet){
+            font-size: $font-xl;
+          }
 
           span {
             display: flex;
+            align-items: center;
             margin-right: 6px;
             line-height: 0.9;
           }
@@ -1611,7 +1621,13 @@ ul li::before {
       .accessoires-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 20px;
+        gap: 16px;
+        @media(max-width: $desktop){
+          grid-template-columns: repeat(3, 1fr);
+        }
+        @media(max-width: $tablet){
+          grid-template-columns: repeat(1, 1fr);
+        }
 
         img {
           padding: 10px;

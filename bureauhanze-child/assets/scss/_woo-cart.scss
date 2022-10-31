@@ -136,6 +136,9 @@
 
         .product-name {
             display: flex;
+            @media(max-width: $desktop){
+                flex-direction: column;
+            }
 
             .product-thumbnail {
                 margin-right: $margin-lg;
@@ -153,6 +156,9 @@
 
                 .product_name {
                     font-size: $font-xl;
+                    @media(max-width: $mobile){
+                        font-size: $font;
+                    }
                     .variation {
                         font-size: $font-md;
                         dt {
@@ -396,6 +402,7 @@ div.woocommerce_cart_outer > form {
     position: relative;
     .product-thumbnail {
         min-width: fit-content;
+        max-width: 98px;
     }
     .product-subtotal {
         color: #1C5072;
