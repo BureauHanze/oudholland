@@ -68,18 +68,16 @@ get_header('shop'); ?>
                                 } ?>
                             </div>
 
-                            <div class="filters__checkboxes">
-                                <h3 class="filters__options">Bladkleur</h3>
+                            <div class="facet-wrap">
                                 <?php
-                                echo do_shortcode('[facetwp facet="opties"]'); ?>
-                            </div>
-                            
-                            
-                            <div class="filters__price">
-                                <h3 class="filters__options">Prijs</h3>
+                                echo do_shortcode('[facetwp facet="lengte"]'); ?>                           
+                                                
                                 <?php
                                 echo do_shortcode('[facetwp facet="prijs"]'); ?>
                             </div>
+                            
+                            <?php
+                            echo do_shortcode('[facetwp facet="reset"]'); ?>
 
                         </div>
 

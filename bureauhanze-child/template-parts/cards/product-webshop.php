@@ -1,5 +1,7 @@
 <?php
-$product = wc_get_product(); ?>
+$product = wc_get_product(); 
+// var_dump($product);
+?>
 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="webshop-block__product">
     <div class="product__image">
         <?php the_post_thumbnail(); ?>

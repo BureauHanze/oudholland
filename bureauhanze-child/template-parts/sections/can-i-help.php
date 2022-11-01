@@ -5,7 +5,7 @@
         <h4>Direct contact</h4>
         <div class="popup__content">
             <div class="content__image">
-                <img src="/wp-content/uploads/2021/12/bureauhanze.jpeg" alt="">
+                <img src="/wp-content/uploads/2022/10/pop-up.webp" alt="Direct contact">
             </div>
             <div class="content__content">
                 <?php

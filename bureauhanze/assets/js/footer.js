@@ -134,7 +134,7 @@ function w3RemoveClass(element, name) {
 
 // add --active class on mobile menu items when clicked
 window.onload = () => {
-    var mobileMenuItems = document.querySelectorAll('.menu-item a');
+    var mobileMenuItems = document.querySelectorAll('.menu-item');
     for (var i = 0; i < mobileMenuItems.length; i++) {
         mobileMenuItems[i].addEventListener('click', function(){
             this.classList.toggle('--active')
