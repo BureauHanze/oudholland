@@ -310,6 +310,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         @media(max-width: $desktop){
           flex-direction: column-reverse;
           gap: $gap-md;
@@ -331,7 +332,6 @@
             font-size: $font-sm;
             font-style: italic;
             text-align: left;
-            padding: 0 $padding-lg;
           }
         }
   
@@ -896,4 +896,30 @@
   justify-content: space-between;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+
+
+.woocommerce-checkout-payment {
+  .woocommerce-terms-and-conditions-wrapper {
+    min-width: 100%;
+    order: -1;
+  }
+
+  .woocommerce-terms-and-conditions-wrapper {
+    display: flex;
+    gap: $gap-xl;
+    label {
+      font-size: .75rem;
+      position: relative;
+      background: none;
+      padding: 0px !important;
+      left: 0;
+      top: -10px;
+      margin: 0px !important;
+      display: block;
+      .woocommerce-terms-and-conditions-checkbox-text {
+        line-height: 1;
+      }
+    }
+  }
 }

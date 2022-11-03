@@ -188,3 +188,14 @@
 
 
 
+
+
+.pamSwiper {
+    .card__footer {
+        .card__price {
+            .woocommerce-Price-amount:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+}

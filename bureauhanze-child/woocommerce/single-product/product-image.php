@@ -53,8 +53,12 @@ $wrapper_classes   = apply_filters(
             </div>
 
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <?php 
+        if(count($attachment_ids) > '1'): ?>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        <?php
+        endif; ?>
     </div>
 
 

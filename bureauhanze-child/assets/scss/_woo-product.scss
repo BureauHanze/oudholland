@@ -1343,6 +1343,7 @@
                 margin: 0px;
                 line-height: 1;
                 margin-bottom: $margin-sm;
+                display: block;
               }
               > span:not(.price) {
                 font-size: 12px;
@@ -1499,7 +1500,7 @@ ul li::before {
 
     .pam-heading {
       display: flex;
-      gap: $gap-xl;
+      gap: $gap-lg;
       align-items: center;
       padding: 40px;
       background-color: #fdf5ec;
@@ -1520,11 +1521,9 @@ ul li::before {
         margin-bottom: $margin-xs;
 
         svg {
-          position: absolute;
-          top: -16px;
-          left: -24px;
+          height: 20px;
           width: 20px;
-          align-items: center;
+          margin-top: 2px;
           margin-right: 7px;
         }
       }
@@ -1549,18 +1548,14 @@ ul li::before {
         h4 {
           color: #1c5072;
           display: flex;
-          gap: $gap-sm;
-          flex-direction: column;
-          justify-content: center;
+          gap: $gap-sm;          
           @media(max-width: $tablet){
             font-size: $font-xl;
           }
 
           span {
             display: flex;
-            align-items: center;
-            margin-right: 6px;
-            line-height: 0.9;
+            align-items: center;                                  
           }
 
           svg {
@@ -1665,9 +1660,11 @@ ul li::before {
 
     .pam-swiper-buttons {
       width: 30px;
-      background-image: url("../svg/chervon-white-bkg.svg");
+      background-image: url("/wp-content/themes/bureauhanze-child/assets/svg/chevron-white.svg"); 
+      background-color: $primary-color;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: 8px;
+      background-position: center;
       height: 30px;
       box-shadow: 2px 2px rgb(0 0 0 / 10%);
       border-radius: 5px;
@@ -1830,5 +1827,17 @@ ul li::before {
   .price {
     display: block !important;
     margin-bottom: $margin-lg;
+  }
+}
+
+
+.single {
+  .single_product_outer:not(.accessoires) {
+    .product_summary {
+        form.cart {
+          display: flex;
+          flex-direction: column;
+        }
+      }
   }
 }

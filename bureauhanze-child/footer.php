@@ -85,7 +85,7 @@
                     <a href="/kantoormeubelen-zwolle/" title="Kantoormeubelen Zwolle">Kantoormeubelen Zwolle</a>
                     <a href="/kantoormeubelen-apeldoorn/" title="Kantoormeubelen Zwolle">Kantoormeubelen Apeldoorn</a>
                     <a href="/kantoormeubelen-amersfoort/" title="Kantoormeubelen Zwolle">Kantoormeubelen Amersfoort</a>
-                    <a href="/klein-kantoor-inrichten/" title="Klein katoor inrichten">Klein katoor inrichten</a>
+                    <a href="/klein-kantoor-inrichten/" title="Klein katoor inrichten">Klein kantoor inrichten</a>
                 </div>
             </div>
         </div>
