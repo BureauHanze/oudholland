@@ -84,7 +84,7 @@ jQuery( function( $ ) {
 } );
 
 
-// getting all input fields & progress line
+// getting all input consts for the checkout process
 const voornaam = document.getElementById('billing_first_name')
 const shipVoornaam = document.getElementById('shipping_first_name')
 const achternaam = document.getElementById('billing_last_name')
@@ -97,95 +97,219 @@ const plaats = document.getElementById('billing_city')
 const shipPlaats = document.getElementById('shipping_city')
 const email = document.getElementById('billing_email')
 const phone = document.getElementById('billing_phone')
-const line = document.getElementById('tussen1-2');
+const bedrijf = document.getElementById('billing_company')
+const shipBedrijf = document.getElementById('shipping_company')
+
+const differentAdress = document.getElementById('ship-to-different-address-checkbox');
 const errorMessage = document.getElementById('formValidation');
-const diffrentAdress = document.getElementById('ship-to-different-address-checkbox');
+const stepWrap = document.getElementById('checkoutWrap');
+const checkStep1 = document.getElementById('stap1');
+const checkStep2 = document.getElementById('stap2');
+const checkStep3 = document.getElementById('stap3');
+const checkStep4 = document.getElementById('stap4');
 
 
+function nextStepCheckout(currentStep) { // Makes the 'Next' button work in checkout
 
-var progress = 12.5;
-if (line) {
-    line.style.width = progress + "%";
-}
-
-// putting the inputs in an array
-allInputs = [voornaam, achternaam, straat, postcode, plaats, email, phone]
-
-allInputs.forEach(checkInput);
-var proceed = false;
-
-
-function checkInput(value) {
-    if (value) {
-        if (value.value) {
-            progress = progress + 12.5;
-            line.style.width = progress + "%";
-            value.proceed = true;
-        }
-
-
-        value.addEventListener('change', (event) => {
-
-            if (value.value && !value.proceed) {
-                progress = progress + 12.5;
-                line.style.width = progress + "%";
-                value.proceed = true;
-            } else if(value.value && value.proceed) {
-                // do nothing
-            } else {
-                progress = progress -12.5;
-                line.style.width = progress + "%";
-                value.proceed = false;
-            }
-        });
-    }
-}
-var shipVerder = false;
-if (diffrentAdress) {
-    diffrentAdress.addEventListener('change', function() {
-        shipVerder = !shipVerder;
-    })
-}
-
-function nextStepCheckout() {
     var verder = true;
-    if (shipVerder) {
-        if (!shipVoornaam.value || !shipAchternaam.value || !shipStraat.value || !shipPostcode.value || !shipPlaats.value) {
-            verder = false;
-        }
-    } else if (!voornaam.value || !achternaam.value || !straat.value || !postcode.value || !plaats.value || !email.value || !phone.value) {
+    if (!voornaam.value || !achternaam.value || !straat.value || !postcode.value || !plaats.value || !email.value || !phone.value) {
         verder = false;
     }
+    
+    var verderShip = true;
+    if(!shipVoornaam.value || !shipAchternaam.value || !shipStraat.value || !shipPostcode.value || !shipPlaats.value ) {
+        verderShip = false;
+    }
 
-    if (verder) {
-        var step1_content = document.getElementById("checkout_step1");
-        var step2_content = document.getElementById("checkout_step2");
+    if(currentStep) {
+        formValidation.classList.remove('active');
+        if(currentStep == '1') {
+            if(verder) {
+                stepWrap.classList.add('step_2');
 
-        var afgerond = document.getElementById("stap1");
-        var meeBezig = document.getElementById("stap2");
+                checkStep1.classList.add('done');
+                checkStep1.classList.remove('current');
+                checkStep2.classList.add('current');
+            } else {
+                formValidation.classList.add('active');
+            }
+        }
+        if(currentStep == '2') {
+            if(verderShip || !differentAdress.checked) {
+                stepWrap.classList.add('step_3');
 
-        var lijn1_2 = document.getElementById("tussen1-2");
+                checkStep2.classList.add('done');
+                checkStep2.classList.remove('current');
+                checkStep3.classList.add('current');
+            } else {
+                formValidation.classList.add('active');
+            }
+        }
+        if(currentStep == '3') {
+            stepWrap.classList.add('step_4');
 
-        lijn1_2.style.width = "100%";
-        if (meeBezig || afgerond) {
-            meeBezig.classList.add("active-class");
-            afgerond.classList.add("done-class");
+            checkStep3.classList.add('done');
+            checkStep3.classList.remove('current');
+            checkStep4.classList.add('current');
+        }
+    }
+    orderInfo();
+    scrollTop();
+}
+
+
+function prevStepCheckout(currentStep) {  // Makes the 'Previous' button work in checkout
+
+    if(currentStep) {
+        if(currentStep == '2') {
+            stepWrap.classList.remove('step_2');
+            stepWrap.classList.remove('step_3');
+            stepWrap.classList.remove('step_4');
+
+            checkStep1.classList.remove('done');
+            checkStep2.classList.remove('done');
+            checkStep3.classList.remove('done');
+            checkStep2.classList.remove('current');
+            checkStep3.classList.remove('current');
+            checkStep4.classList.remove('current');
+
+            checkStep1.classList.add('current');
+        }
+        if(currentStep == '3' && !stepWrap.classList.contains('step_4')) {
+            stepWrap.classList.remove('step_3');
+            
+            checkStep3.classList.remove('done');
+            checkStep3.classList.remove('current');
+            checkStep4.classList.remove('current');
+
+            checkStep2.classList.remove('done');
+            checkStep2.classList.add('current');
         }
 
+        if(currentStep == '3' && stepWrap.classList.contains('step_4')) {
+            stepWrap.classList.remove('step_4');
 
-        window.scrollTo(0, 50);
+            checkStep4.classList.remove('current');
 
-        step1_content.style.display = "none";
-        step2_content.style.display = "block";
-        errorMessage.style.display = "none";
+            checkStep3.classList.remove('done');
+            checkStep3.classList.add('current');
+        }
+    }
+    orderInfo();
+    scrollTop();
+}
+
+function navStepCheckout(currentStep) { // Makes the steps clickable
+
+    var verder = true;
+    
+    if (!voornaam.value || !achternaam.value || !straat.value || !postcode.value || !plaats.value || !email.value || !phone.value) {
+        verder = false;
+    }
+    
+    if(currentStep == '1') {
+        stepWrap.classList.remove('step_2');  
+        stepWrap.classList.remove('step_3');  
+        stepWrap.classList.remove('step_4');
+
+        stepWrap.classList.add('step_1');
+
+        checkStep1.classList.add('current');
+        
+        checkStep2.classList.remove('current');
+        checkStep2.classList.remove('done');
+        checkStep3.classList.remove('current');
+        checkStep3.classList.remove('done');
+        checkStep4.classList.remove('current');
+        checkStep4.classList.remove('done');
+    }
+
+    if(verder) {
+
+        if(currentStep == '2') {
+            stepWrap.classList.remove('step_1');
+            stepWrap.classList.remove('step_3');
+            stepWrap.classList.remove('step_4');
+
+            stepWrap.classList.add('step_2');
+
+            checkStep1.classList.add('done');
+            checkStep2.classList.add('current');
+
+            checkStep3.classList.remove('current');
+            checkStep3.classList.remove('done');
+            checkStep4.classList.remove('current');
+            checkStep4.classList.remove('done');
+        } 
+
+        if(currentStep == '3') {
+            stepWrap.classList.remove('step_1');
+            stepWrap.classList.remove('step_2');  
+            stepWrap.classList.remove('step_4');  
+
+            stepWrap.classList.add('step_3'); 
+
+            checkStep1.classList.add('done');
+            checkStep2.classList.add('done');
+            checkStep3.classList.add('current');
+
+            checkStep4.classList.remove('current');
+            checkStep4.classList.remove('done');
+        } 
+
+        if(currentStep == '4') {
+            stepWrap.classList.remove('step_1');
+            stepWrap.classList.remove('step_2');  
+            stepWrap.classList.remove('step_3');  
+
+            stepWrap.classList.add('step_4');  
+            
+            checkStep1.classList.add('done');
+            checkStep2.classList.add('done');
+            checkStep3.classList.add('done');
+            checkStep4.classList.add('current');
+        } 
+
     } else {
-        errorMessage.style.height = "fit-content";
-        errorMessage.style.opacity = 1;
-        errorMessage.style.marginBottom = "40px";
-        errorMessage.style.padding = "5px 25px";
+        formValidation.classList.add('active');
+    }
+    orderInfo();
+    scrollTop();
+}
+
+
+function orderInfo() {
+    // General info
+    document.getElementById("firstname").innerHTML = voornaam.value;
+    document.getElementById("lastname").innerHTML = achternaam.value;
+    document.getElementById("company").innerHTML = bedrijf.value;
+    document.getElementById("street").innerHTML = straat.value;
+    document.getElementById("zipcode").innerHTML = postcode.value;
+    document.getElementById("city").innerHTML = plaats.value;
+    document.getElementById("phone").innerHTML = phone.value;
+    document.getElementById("email").innerHTML = email.value;
+    // Shipping info
+    if(differentAdress.checked) {
+        document.getElementById("shipfirstname").innerHTML = shipVoornaam.value;
+        document.getElementById("shiplastname").innerHTML = shipAchternaam.value;
+        document.getElementById("shipcompany").innerHTML = shipBedrijf.value;
+        document.getElementById("shipstreet").innerHTML = shipStraat.value;
+        document.getElementById("shipzipcode").innerHTML = shipPostcode.value;
+        document.getElementById("shipcity").innerHTML = shipPlaats.value;
+    } else {
+        document.getElementById("shipfirstname").innerHTML = voornaam.value;
+        document.getElementById("shiplastname").innerHTML = achternaam.value;
+        document.getElementById("shipcompany").innerHTML = bedrijf.value;
+        document.getElementById("shipstreet").innerHTML = straat.value;
+        document.getElementById("shipzipcode").innerHTML = postcode.value;
+        document.getElementById("shipcity").innerHTML = plaats.value;
     }
 }
 
+
+function scrollTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 
 

@@ -295,7 +295,6 @@ if(formProjectinrichting){
 
 window.addEventListener("load", function () {
 
-
     document.querySelector("div.component_inner > div.component_selections > div.component_content > .component_summary > .product")
 
     validateOptons();
@@ -317,24 +316,6 @@ window.addEventListener("load", function () {
             validateOptons();
         })
     }
-
-
-
-
-    // blurry background on menu hover
-    // var menuItems = document.querySelectorAll('#menu-webshop-1 > li');
-    // for(let i = 0; i = menuItems.length; i++) {
-    //     menuItems[i].addEventListener("mouseenter", (event) => {
-
-    //         console.log('test');
-        
-
-    //     }, false);
-    // }
-
-
-
-
 })
 
 

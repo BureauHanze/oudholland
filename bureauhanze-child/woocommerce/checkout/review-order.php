@@ -88,7 +88,7 @@ defined( 'ABSPATH' ) || exit;
 				<?php endforeach; ?>
 			<?php else : ?>
 				<div class="tax-total">
-					<div><?php echo esc_html( WC()->countries->tax_or_vat() ); ?></div>
+					<div>21% btw</div>
 					<div><?php wc_cart_totals_taxes_total_html(); ?></div>
 				</div>
 			<?php endif; ?>

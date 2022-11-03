@@ -12,7 +12,6 @@ if ( apply_filters( 'woocommerce_checkout_show_terms', true ) && function_exists
 	do_action( 'woocommerce_checkout_before_terms_and_conditions' );
 
 	?>
-	<a style="text-decoration: none" href="/afrekenen/" title="Stap terug"><div class="btn btn-primary-outline step_back_btn">Ga stap terug</div></a>
 	<div class="woocommerce-terms-and-conditions-wrapper">
 		<?php
 		/**

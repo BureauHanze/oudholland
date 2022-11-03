@@ -36,6 +36,7 @@ if ( ! wp_doing_ajax() ) {
 		</ul>
 	<?php endif; ?>
 	<div class="form-row place-order">
+		<div class="btn btn-primary-outline prev_step_button" onclick="prevStepCheckout(3)">Ga Terug</div>	
 		<noscript>
 			<?php
 			/* translators: $1 and $2 opening and closing emphasis tags respectively */

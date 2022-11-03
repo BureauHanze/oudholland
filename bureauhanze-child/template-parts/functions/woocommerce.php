@@ -268,10 +268,10 @@ add_filter( 'woocommerce_order_button_html', 'custom_order_button_html');
 function custom_order_button_html( $button ) {
 
     // Button text
-    $order_button_text = __('Reservering plaatsen', 'woocommerce');
+    $order_button_text = __('Bestelling plaatsen', 'woocommerce');
 
     // Markup - add in classes, data attibutes
-    $button = '<input type="submit" class="btn chechout_btn" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '"/>';
+    $button = '<input type="submit" class="btn btn-secondary" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '"/>';
 
     return $button;
 }

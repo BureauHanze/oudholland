@@ -51,8 +51,8 @@ defined('ABSPATH') || exit;
         <?php endif; ?>
 
         <div class="totaalbedrag">
-            <div><?php esc_html_e('Totaalbedrag', 'woocommerce'); ?></div>
-            <div><?php wc_cart_totals_subtotal_html(); ?></div>
+            <div>Te betalen:</div>
+            <div><?php wc_cart_totals_order_total_html(); ?></div>
         </div>
 
         <?php foreach (WC()->cart->get_coupons() as $code => $coupon) : ?>
@@ -122,5 +122,4 @@ defined('ABSPATH') || exit;
     <?php echo get_template_part( '/assets/svg/ideal' ); ?>
     <?php echo get_template_part( '/assets/svg/mastercard-logo' ); ?>
     <?php echo get_template_part( '/assets/svg/visa' ); ?>
-    <?php echo get_template_part( '/assets/svg/apple-pay' ); ?>
 </div>

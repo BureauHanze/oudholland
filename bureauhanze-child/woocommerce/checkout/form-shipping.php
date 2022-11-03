@@ -62,10 +62,6 @@ defined( 'ABSPATH' ) || exit;
 			<?php foreach ( $checkout->get_checkout_fields( 'order' ) as $key => $field ) : ?>
 				<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
 			<?php endforeach; ?>
-
-			<div>
-	      	  <div class="btn btn-primary next_step_button" onclick="nextStepCheckout()">Ga verder</div>
-    		</div>
 		</div>
 
 

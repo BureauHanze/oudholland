@@ -1020,8 +1020,8 @@
         background: #0D3043;
         padding: 0;
         .container {
-            // padding: 0;
-            padding-top: 1px;
+            padding-top: 0px;
+            padding-bottom: 0px;
             .nav__where {
                 &::before {
                     background: $yellow;
@@ -1163,8 +1163,6 @@
     .header__leader {
         .container {
             max-width: 1400px;
-            // padding-left: 0;
-            // padding-right: 0;
             .row {
                 h1 {
                     margin-bottom: $margin-sm;
